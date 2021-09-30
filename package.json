@@ -1,0 +1,49 @@
+{
+  "name": "devjobs_master",
+  "version": "1.0.0",
+  "description": "Portal de empleo para desarrolladores ",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon ./index.js --exec babel-node --ignore 'client'",
+    "copyfiles": "ncp src/views dist/views && ncp src/public dist/public",
+    "start": "node ./index.js",
+    "compile": "babel ./ -d dist",
+    "clean": "rimraf dist",
+    "client": " npm run serve --prefix client",
+    "dev": "concurrently \" npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "vuejs",
+    "express"
+  ],
+  "author": "Devsystem",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.18.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.8",
+    "morgan": "^1.10.0",
+    "shortid": "^2.2.16",
+    "slug": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.2",
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.13",
+    "rimraf": "^3.0.2"
+  }
+}
