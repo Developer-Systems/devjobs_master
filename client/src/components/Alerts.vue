@@ -1,50 +1,5 @@
 <template>
   <div class="body">
-    <header class="p-3 bg-dark bg-transparent text-white">
-      <div class="container-fluid">
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-        >
-          <a
-            href="/"
-            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-          >
-            <svg
-              class="bi me-2"
-              width="40"
-              height="32"
-              role="img"
-              aria-label="Bootstrap"
-            >
-              <use xlink:href="#bootstrap" />
-            </svg>
-            <span class="fs-4">DevJobs</span>
-          </a>
-          
-          <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto ">
-            <input
-              type="search"
-              class="form-control form-control-dark"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </form>
-          <div class="icon  " id="bell">
-            <img src="https://i.imgur.com/AC7dgLA.png" alt="" />
-          </div>
-          <div class="notifications" id="box">
-            <h2>Notificaciones <span>1</span></h2>
-            <div class="notifications-item">
-              <div class="text">
-                <h4>Bievenido!</h4>
-                <p>Bienvenido! - Gracias por ser parte del mundo DevJobs.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </header>
     <!-- Notification Form -->
     <div class="container">
       <div class="row justify-content-center white">

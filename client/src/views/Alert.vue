@@ -1,15 +1,20 @@
 <template>
+<div>
+  <Header/>
   <Alerts />
+</div>
 </template>
 
 <script>
-  import Alerts from '../components/Alerts'
+import Header from "@/components/Header.vue";
+import Alerts from "@/components/Alerts";
 
-  export default {
-    name: 'Alert',
+export default {
+  name: "Alert",
 
-    components: {
-      Alerts,
-    },
-  }
+  components: {
+    Alerts,
+    Header
+  },
+};
 </script>
