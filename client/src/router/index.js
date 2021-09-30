@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Alert from "../views/Alert.vue";
 import Autentication from "../views/Autentication.vue";
+import JobList from "../views/JobList.vue";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ const routes = [
     name: "Autentication",
     component: Autentication,
   },
+  {
+    path: "/jobs-list",
+    name: "Jobs List",
+    component: JobList,
+  }
 ];
 
 const router = new VueRouter({
