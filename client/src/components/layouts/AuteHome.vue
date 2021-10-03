@@ -4,7 +4,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-0 ">
         <a href="index.html"
-          ><img src="assets/img/logo_header_blanco.png" alt="" class="img-fluid"
+          ><img src="../../assets/images/logo/logo_header_blanco.png" alt="" class="img-fluid"
         /></a>
       </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
