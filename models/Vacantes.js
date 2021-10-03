@@ -34,6 +34,10 @@ const vacantesSchema =  new mongoose.Schema({
         type: String,
         lowercase:true
     },
+    estado:{
+        type: Boolean,
+        default: 1
+    }
     skills: [String],
     candidatos: [{
         nombre: String,
