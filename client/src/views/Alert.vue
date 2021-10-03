@@ -1,20 +1,25 @@
 <template>
-<div>
-  <Header/>
-  <Alerts />
-</div>
+  <div>
+    <component :is="layout"></component>
+
+    <Alerts />
+  </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
 import Alerts from "@/components/Alerts";
+import Default from "@/components/layouts/Default.vue";
 
 export default {
+  data() {
+    return { layout: "Default" };
+  },
+
   name: "Alert",
 
   components: {
     Alerts,
-    Header
+    Default,
   },
 };
 </script>

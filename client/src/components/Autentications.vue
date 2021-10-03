@@ -1,37 +1,6 @@
 <template>
   <div class = 'body'>
-    <header class="p-3 bg-dark bg-transparent text-white">
-      <div class="container-fluid">
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-        >
-          <a
-            href="/"
-            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-          >
-            <svg
-              class="bi me-2"
-              width="40"
-              height="32"
-              role="img"
-              aria-label="Bootstrap"
-            >
-              <use xlink:href="#bootstrap" />
-            </svg>
-            <span class="fs-4">DevJobs</span>
-          </a>
-
-          <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto ">
-            <input
-              type="search"
-              class="form-control form-control-dark"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </form>
-        </div>
-      </div>
-    </header>
+    
     <div class="login-reg-panel">
       <div class="login-info-box">
         <h2>Tienes una cuenta?</h2>
