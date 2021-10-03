@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <!-- Notification Form -->
-    <div class="container">
+    <div class="container mt-6">
       <div class="row justify-content-center white">
         <div class="col-12 col-lg-10 col-xl-8 mx-auto">
           <h2 class="h3 mb-4 page-title">Alertas</h2>
@@ -156,7 +156,7 @@
 </template>
 
 <script>
-import $ from "jquery";
+
 export default {
   mounted() {
     // $(document).ready(function() {
@@ -200,6 +200,9 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Mukta");
+.mt-6{
+  margin-top: 5rem;
+}
 html {
   overflow-y: hidden !important;
 }
