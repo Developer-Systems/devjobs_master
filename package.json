@@ -1,16 +1,17 @@
 {
   "name": "devjobs_master",
   "version": "1.0.0",
-  "description": "Portal de empleo para desarrolladores ",
+  "description": "Portal de empleo para desarrolladores",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon ./index.js --exec babel-node --ignore 'client'",
-    "copyfiles": "ncp src/views dist/views && ncp src/public dist/public",
-    "start": "node ./index.js",
-    "compile": "babel ./ -d dist",
-    "clean": "rimraf dist",
+    "serve": "nodemon ./index.js --exec babel-node --ignore 'client'",
     "client": " npm run serve --prefix client",
+    "start": "node ./index.js",
     "dev": "concurrently \" npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Developer-Systems/devjobs_master.git"
   },
   "keywords": [
     "nodejs",
@@ -20,9 +21,12 @@
   ],
   "author": "Devsystem",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Developer-Systems/devjobs_master/issues"
+  },
+  "homepage": "https://github.com/Developer-Systems/devjobs_master#readme",
   "dependencies": {
     "connect-mongo": "^4.6.0",
-    "connect-mongodb-session": "^3.1.0",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.18.1",
     "cors": "^2.8.5",
@@ -42,8 +46,6 @@
     "@babel/preset-env": "^7.15.6",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.2",
-    "ncp": "^2.0.0",
-    "nodemon": "^2.0.13",
-    "rimraf": "^3.0.2"
+    "nodemon": "^2.0.13"
   }
 }

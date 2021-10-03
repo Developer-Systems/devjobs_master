@@ -159,22 +159,41 @@
 import $ from "jquery";
 export default {
   mounted() {
-    $(document).ready(function() {
-      var down = false;
+    // $(document).ready(function() {
+    //   var down = false;
 
-      $("#bell").click(function(e) {
-        var color = $(this).text();
-        if (down) {
-          $("#box").css("height", "0px");
-          $("#box").css("opacity", "0");
-          down = false;
+    //   $("#bell").click(function(e) {
+    //     var color = $(this).text();
+    //     if (down) {
+    //       $("#box").css("height", "0px");
+    //       $("#box").css("opacity", "0");
+    //       down = false;
+    //     } else {
+    //       $("#box").css("height", "auto");
+    //       $("#box").css("opacity", "1");
+    //       down = true;
+    //     }
+    //   });
+    // });
+    this.notificaciones()
+  },
+  methods: {
+    notificaciones(){
+      const bell = document.getElementById('bell');
+      const box = document.getElementById('box');
+      let down = false
+      bell.addEventListener('click', () => {
+        let color = this.down.text();
+        if (this.down) {
+          box.setAttribute("style", "height: 0px; opacity:0");
+          this.down = false;
         } else {
-          $("#box").css("height", "auto");
-          $("#box").css("opacity", "1");
-          down = true;
+          box.setAttribute("style", "height: auto; opacity:1");
+          this.down = true;
         }
-      });
-    });
+
+      })
+    }
   },
 };
 </script>

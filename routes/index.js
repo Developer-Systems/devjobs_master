@@ -1,12 +1,12 @@
-const express = require("express");
-const router = express.Router();
+import {Router} from "express";
+const router = Router();
+import * as vacantesCtrl from '../controllers/vacantesController'
 
-module.exports  = () => {
-  
-  router.get("/", (req, res) => {
-    res.send("<h2>Welcome to Express App<h2>");
-  });
-  return router;
-};
+router.post('/vacantes' , vacantesCtrl.createVacante);
+router.get('/vacantes' , vacantesCtrl.getVacante);
+router.get('/vacantes/:id' , vacantesCtrl.getVacanteById);
+router.put('/vacantes/:id' , vacantesCtrl.updateVacanteById);
+router.put('/vacantes' , vacantesCtrl.updateVacante);
+router.put('/vacantes/:id  ' , vacantesCtrl.cerrarVacante);
 
-
+export default router 

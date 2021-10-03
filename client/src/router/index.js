@@ -3,10 +3,16 @@ import VueRouter from "vue-router";
 import Alert from "../views/Alert.vue";
 import Autentication from "../views/Autentication.vue";
 import JobList from "../views/JobList.vue";
+import Home from '../views/Home.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home
+  },
   {
     path: "/alert",
     name: "Alert",

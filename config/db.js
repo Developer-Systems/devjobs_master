@@ -1,9 +1,14 @@
-const mongoose = require('mongoose');
-require('dotenv').config({path: 'variables.env'});
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config({path: 'variables.env'});
 
 
-mongoose.connect(process.env.DATABASE, {useNewUrlParser:true});
+const uri = process.env.DATABASE || 'mongodb://localhost:27017/devjobs';
+const options = {useNewUrlParser:true, useUnifiedTopology: true }
 
-mongoose.connection.on('error', (error) => {
-    console.log(error);
-})
+mongoose.connect(uri, options).then(
+    /** ready to use. The `mongoose.connect()` promise resolves to mongoose instance. */
+    () => { console.log('Conectado a DB') },
+    /** handle initial connection error */
+    err => { console.log(err) }
+  );

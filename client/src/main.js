@@ -7,6 +7,7 @@ import * as Bootstrap from "bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import $ from "jquery";
 
+
 Vue.config.productionTip = false
 
 new Vue({
