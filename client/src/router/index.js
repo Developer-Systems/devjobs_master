@@ -4,6 +4,8 @@ import Alert from "../views/Alert.vue";
 import Autentication from "../views/Autentication.vue";
 import JobList from "../views/JobList.vue";
 import Home from '../views/Home.vue'
+import UpdateUserProfile from '../views/UpdateUserProfile.vue'
+import UpdateCompanyProfile from '../views/UpdateCompanyProfile.vue'
 
 Vue.use(VueRouter);
 
@@ -27,6 +29,16 @@ const routes = [
     path: "/jobs-list",
     name: "Jobs List",
     component: JobList,
+  }, 
+  {
+    path: "/update-user",
+    name: "Update User Profile",
+    component: UpdateUserProfile,
+  }, 
+  {
+    path: "/update-company",
+    name: "Update Company Profile",
+    component: UpdateCompanyProfile,
   }
 ];
 
