@@ -1,24 +1,31 @@
 <template>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container-fluid d-flex align-items-center justify-content-lg-between">
-      <h1 class="logo me-auto me-lg-0 ">
+  <header id="header" class="fixed-top  ">
+    <nav
+      class="d-flex justify-content-between navbar navbar-expand-lg navbar order-last order-lg-0"
+    >
+      <h1 class="logo me-lg-0 ">
         <a href="index.html"
-          ><img src="../../assets/images/logo/logo_header_blanco.png" alt="" class="img-fluid"
+          ><img
+            src="../../assets/images/logo/logo_header_blanco.png"
+            alt=""
+            class="img-fluid"
         /></a>
       </h1>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto ">
+
+      <ul>
+        <li>
+          <a class="nav-link scrollto active" href="#DevJobs">Inicio DevJobs</a>
+        </li>
+        <li><a class="nav-link scrollto" href="#vacancy">Vacantes</a></li>
+        <li><a class="nav-link scrollto" href="#alert">Alertas</a></li>
+        <li>
+          <a class="nav-link scrollto" href="#JobsList">Lista de trabajos</a>
+        </li>
+        <li><a class="nav-link scrollto" href="#Contacto">Contacto</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+      <form class="col-6 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto ">
         <input
           type="search"
           class="form-control form-control-dark"
@@ -38,7 +45,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
   <!-- End Header -->
 </template>
@@ -83,8 +90,11 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css?family=Mukta");
+.navbar {
+  color: black;
+}
 /* Notifications Form */
 .notifications {
   width: 300px;
