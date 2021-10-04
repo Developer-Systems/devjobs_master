@@ -3,9 +3,10 @@ import VueRouter from "vue-router";
 import Alert from "../views/Alert.vue";
 import Autentication from "../views/Autentication.vue";
 import JobList from "../views/JobList.vue";
-import Home from '../views/Home.vue'
-import UpdateUserProfile from '../views/UpdateUserProfile.vue'
-import UpdateCompanyProfile from '../views/UpdateCompanyProfile.vue'
+import Home from '../views/Home.vue';
+import UpdateUserProfile from '../views/UpdateUserProfile.vue';
+import UpdateCompanyProfile from '../views/UpdateCompanyProfile.vue';
+import newVacancy from '../views/newVacancy.vue';
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/vacancy",
+    name: "New Vacancy",
+    component: newVacancy
   },
   {
     path: "/alert",
