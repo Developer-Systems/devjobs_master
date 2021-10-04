@@ -2,7 +2,7 @@ import {Router} from "express";
 const router = Router();
 import * as vacantesController from '../controllers/vacantesController'
 
-router.get('/', homeController.mostrarTrabajos);
+// router.get('/', homeController.mostrarTrabajos);
 
 // Crear Vacantes
 router.get('/vacantes/nueva',  
@@ -26,7 +26,7 @@ router.post('/vacantes/editar/:url',
 );
 
 // Eliminar Vacantes
-router.update('/vacantes/cerrar/:id', 
+router.put('/vacantes/cerrar/:id', 
     vacantesController.cerrarVacante
 );
 
@@ -87,4 +87,5 @@ router.get('/candidatos/:id',
 // Buscador de Vacantes
 router.post('/buscador', vacantesController.buscarVacantes);
 
-export default router 
+
+module.exports = router;

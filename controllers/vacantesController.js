@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const Vacante = mongoose.model("Vacante");
+import Vacante from '../models/Vacantes';
 import multer from "multer";
 import shortid from "shortid";
 
@@ -88,7 +88,7 @@ exports.cerrarVacante = async (req, res) => {
   if (verificarAutor(vacante, req.user)) {
     // Todo bien, si es el usuario, cierra la vacante
     vacante.findOneAndUpdate(
-        {estado: req.params.estado}
+        {estado: estado}
     );
     res.status(200).send("Vacante cerrada Correctamente");
   } else {
@@ -125,17 +125,18 @@ exports.subirCV = (req, res, next) => {
 };
 
 // Opciones de Multer
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, __dirname + "../../client/public/uploads/cv");
+  },
+  filename: (req, file, cb) => {
+    const extension = file.mimetype.split("/")[1];
+    cb(null, `${shortid.generate()}.${extension}`);
+  },
+})
 const configuracionMulter = {
   limits: { fileSize: 100000 },
-  storage: (fileStorage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, __dirname + "../../public/uploads/cv");
-    },
-    filename: (req, file, cb) => {
-      const extension = file.mimetype.split("/")[1];
-      cb(null, `${shortid.generate()}.${extension}`);
-    },
-  })),
+  storage,
   fileFilter(req, file, cb) {
     if (file.mimetype === "application/pdf") {
       // el callback se ejecuta como true o false : true cuando la imagen se acepta
@@ -187,3 +188,47 @@ exports.buscarVacantes = async (req, res) => {
     },
   });
 };
+export function buscarVacantes(arg0, buscarVacantes) {
+    throw new Error("Function not implemented.");
+}
+
+export function formularioNuevaVacante(arg0, formularioNuevaVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function validarVacante(arg0, validarVacante, agregarVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function agregarVacante(arg0, validarVacante, agregarVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function mostrarVacante(arg0, mostrarVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function formEditarVacante(arg0, formEditarVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function editarVacante(arg0, validarVacante, editarVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function cerrarVacante(arg0, cerrarVacante) {
+    throw new Error("Function not implemented.");
+}
+
+export function subirCV(arg0, subirCV, contactar) {
+    throw new Error("Function not implemented.");
+}
+
+export function contactar(arg0, subirCV, contactar) {
+    throw new Error("Function not implemented.");
+}
+
+export function mostrarCandidatos(arg0, mostrarCandidatos) {
+    throw new Error("Function not implemented.");
+}
+
