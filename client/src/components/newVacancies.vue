@@ -1,9 +1,10 @@
 <template>
-
+  <div class="body">
     <div class="container mt-6">
-      <h2><b>Nueva Vacante</b></h2>
-      <p>Llena el formulario y publica tu vacante</p>
-
+      <div class="text-light">
+        <h2><strong>Nueva Vacante</strong></h2>
+        <p>Llena el formulario y publica tu vacante</p>
+      </div>
       <div action="" class="form-control">
         <h4>INFORMACIÓN GENERAL</h4>
         <br />
@@ -63,9 +64,9 @@
           <div>
             <label for="employmentContract">CONTRATO</label>
             <select name="select" class="form-control">
-              <option value="value1">Value 1</option>
-              <option value="value2" selected>Value 2</option>
-              <option value="value3">Value 3</option>
+              <option value="value1">Indefinido</option>
+              <option value="value2" selected>Fijo</option>
+              <option value="value3">Servicios</option>
             </select>
           </div>
           <br />
@@ -77,15 +78,7 @@
               <textarea class="form-control" rows="3"></textarea>
             </div>
           </div>
-
           <br />
-
-          <!--<
-                    div class="row align-items-start">
-                    <div class="row align-items-center">
-                    <div class="row align-items-end">
-                -->
-
           <h4>CONOCIMIENTOS</h4>
           <div class="container">
             <div class="row align-items-start">
@@ -144,46 +137,55 @@
           <br />
           <br />
 
-          <div class="submit">
-            <button type="submit" class="btn btn-primary enviar">
+          <div class="submit d-flex justify-content-around">
+            <button type="submit" class="get-started-btn p-1  enviar">
               PUBLICAR
             </button>
           </div>
         </form>
       </div>
     </div>
-  
+  </div>
 </template>
 
 <style scoped>
-    
-.mt-6{
+.c-1 {
+  color: white !important;
+}
+.body {
+  font-family: "Mukta", sans-serif;
+  -ms-overflow-style: hidden !important;
+  overflow-y: hidden !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #100e17;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.mt-6 {
   margin-top: 5 rem;
-  }
-.wrapper{
-    display: grid;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+}
+.wrapper {
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-div.boton{
-    justify-content: space-evenly;
-    padding: 5px 0;
-   
+div.boton {
+  justify-content: space-evenly;
+  padding: 5px 0;
 }
 
-button{
-    width: 100px;
-    height: 38px;
-    margin-top: 3px;  
-
+button {
+  width: 100px;
+  height: 38px;
+  margin-top: 3px;
 }
 
-.enviar{
-    color: #fff;
-    background: #006837 ;
-    box-shadow: none;
+.enviar {
+  color: #fff;
+  background: #006837;
+  box-shadow: none;
 }
 </style>
-
