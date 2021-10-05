@@ -18,7 +18,7 @@
             success. Learn more about Splunk careers and how you can become a
             part of our journey!
           </p>
-          <a href="#" class="btn btn-dark">View Offer</a>
+          <a href="#" class="btn btn-dark">Apply</a>
         </div>
       </div>
       <br />
@@ -36,7 +36,7 @@
             success. Learn more about Splunk careers and how you can become a
             part of our journey!
           </p>
-          <a href="#" class="btn btn-dark">View Offer</a>
+          <a href="#" class="btn btn-dark">Apply</a>
         </div>
       </div>
       <br />
@@ -54,7 +54,7 @@
             success. Learn more about Splunk careers and how you can become a
             part of our journey!
           </p>
-          <a href="#" class="btn btn-dark">View Offer</a>
+          <a href="#" class="btn btn-dark">Apply</a>
         </div>
       </div>
       <br />
@@ -72,7 +72,7 @@
             success. Learn more about Splunk careers and how you can become a
             part of our journey!
           </p>
-          <a href="#" class="btn btn-dark">View Offer</a>
+          <a href="#" class="btn btn-dark">Apply</a>
         </div>
       </div>
       <br />
@@ -90,7 +90,7 @@
             success. Learn more about Splunk careers and how you can become a
             part of our journey!
           </p>
-          <a href="#" class="btn btn-dark">View Offer</a>
+          <a href="#" class="btn btn-dark">Apply</a>
         </div>
       </div>
     </div>

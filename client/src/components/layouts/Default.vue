@@ -5,24 +5,21 @@
       class="d-flex justify-content-between navbar navbar-expand-lg navbar order-last order-lg-0"
     >
       <h1 class="logo me-lg-0 ">
-        <a href="index.html"
-          ><img
+        <router-link to="/jobs-list" exact-path class="nav-link scrollto"><img
             src="../../assets/images/logo/logo_header_blanco.png"
             alt=""
             class="img-fluid"
-        /></a>
+        /></router-link>
       </h1>
 
       <ul>
+        <li><router-link to="/jobs-list" exact-path class="nav-link scrollto router-link-exact-path-active">Inicio DevJobs</router-link></li>
+        <li><router-link to="/vacancy" exact-path class="nav-link scrollto">Creación de vacantes</router-link></li>
+        <li><router-link to="/alert" exact-path class="nav-link scrollto">Alertas</router-link></li>
         <li>
-          <a class="nav-link scrollto active" href="#DevJobs">Inicio DevJobs</a>
+          <router-link to="/jobs-list" exact-path class="nav-link scrollto router-link-exact-path-active">Lista de trabajos</router-link>
         </li>
-        <li><a class="nav-link scrollto" href="#vacancy">Creación de vacantes</a></li>
-        <li><a class="nav-link scrollto" href="#alert">Alertas</a></li>
-        <li>
-          <a class="nav-link scrollto" href="#JobsList">Lista de trabajos</a>
-        </li>
-        <li><a class="nav-link scrollto" href="#Cuenta">Cuenta</a></li>
+        <li><router-link to="/update-user" exact-path class="nav-link scrollto router-link-exact-path-active">Cuenta</router-link></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
       <form class="col-6 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto ">
