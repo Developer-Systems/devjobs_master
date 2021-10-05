@@ -4,7 +4,7 @@
     <div class="container mt-6">
       <div class="row justify-content-center white">
         <div class="col-12 col-lg-10 col-xl-8 mx-auto">
-          <h2 class="h3 mb-4 page-title">Alertas</h2>
+          <h2 class="h3 mb-4 page-title"><strong>Alertas</strong></h2>
           <div class="my-4">
             <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
               <li class="nav-item">

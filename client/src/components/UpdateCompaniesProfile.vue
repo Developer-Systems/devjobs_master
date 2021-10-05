@@ -1,6 +1,6 @@
 <template>
 <div class="body">
-  <div class="container-fluid rounded text-white mt-5 mb-5  ">
+  <div class="container-fluid d-flex justify-content-around text-white mt-6 mb-5  ">
     <div class="row">
       <div class="col-md-3 border-right">
         <div class="d-flex flex-column align-items-center text-center p-3 py-5">

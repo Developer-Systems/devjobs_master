@@ -1,6 +1,6 @@
 <template>
   <div class="body ">
-    <div class="container rounded mt-5 mb-5 text-white">
+    <div class="container rounded mt-6 mb-5 text-white">
       <div class="row">
         <div class="col-md-3 border-right">
           <div
