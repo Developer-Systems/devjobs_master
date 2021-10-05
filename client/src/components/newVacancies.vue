@@ -1,9 +1,10 @@
 <template>
   <div class="body">
     <div class="container mt-6">
-        <h2 class="text-light"><strong>Nueva Vacante</strong></h2>
+      <div class="text-light">
+        <h2><strong>Nueva Vacante</strong></h2>
         <p>Llena el formulario y publica tu vacante</p>
-
+      </div>
       <div action="" class="form-control">
         <h4>INFORMACIÓN GENERAL</h4>
         <br />
