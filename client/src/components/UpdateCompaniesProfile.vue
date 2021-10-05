@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-3 border-right">
         <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-          <img
+          <img alt="Foto Perfil Empresa"
             class="rounded-circle mt-5
                     border border-white border-4"
             width="150px"
@@ -20,11 +20,11 @@
           </div>
           <div class="row mt-2">
             <div class="col-md-6">
-              <label class="labels">Nombre Empresa</label
+              <label class="labels">Nombre de la empresa</label
               ><input
                 type="text"
                 class="form-control"
-                placeholder="Nombre Empresa"
+                placeholder="Nombre de la empresa"
                 value=""
               />
             </div>
@@ -35,17 +35,17 @@
               ><input
                 type="text"
                 class="form-control"
-                placeholder="Direccíon"
+                placeholder="Dirección"
                 value=""
               />
             </div>
 
             <div class="col-md-12">
-              <label class="labels">Telefono</label
+              <label class="labels">Teléfono</label
               ><input
                 type="text"
                 class="form-control"
-                placeholder="Telefono"
+                placeholder="Teléfono"
                 value=""
               />
             </div>
@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="mt-5 text-center">
-            <button class="btn btn-primary profile-button" type="button">
+            <button class="get-started-btn profile-button" type="button">
               Guardar
             </button>
           </div>
