@@ -64,9 +64,9 @@
           <div>
             <label for="employmentContract">CONTRATO</label>
             <select name="select" class="form-control">
-              <option value="value1">Value 1</option>
-              <option value="value2" selected>Value 2</option>
-              <option value="value3">Value 3</option>
+              <option value="value1">Indefinido</option>
+              <option value="value2" selected>Fijo</option>
+              <option value="value3">Servicios</option>
             </select>
           </div>
           <br />
