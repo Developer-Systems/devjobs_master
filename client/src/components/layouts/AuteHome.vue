@@ -17,12 +17,12 @@
         <li>
           <a class="nav-link scrollto active" href="#DevJobs">Inicio DevJobs</a>
         </li>
-        <li><a class="nav-link scrollto" href="#vacancy">Vacantes</a></li>
+        <li><a class="nav-link scrollto" href="#vacancy"> Creación de vacantes</a></li>
         <li><a class="nav-link scrollto" href="#alert">Alertas</a></li>
         <li>
           <a class="nav-link scrollto" href="#JobsList">Lista de trabajos</a>
         </li>
-        <li><a class="nav-link scrollto" href="#Contacto">Contacto</a></li>
+        <li><a class="nav-link scrollto" href="#Cuenta">Cuenta</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
       <form class="d-flex me-lg-5 ms-auto">
