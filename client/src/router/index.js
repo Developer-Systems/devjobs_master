@@ -7,6 +7,7 @@ import Home from '../views/Home.vue';
 import UpdateUserProfile from '../views/UpdateUserProfile.vue';
 import UpdateCompanyProfile from '../views/UpdateCompanyProfile.vue';
 import newVacancy from '../views/newVacancy.vue';
+import Profile from '../views/Profile.vue';
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     path: "/update-company",
     name: "Update Company Profile",
     component: UpdateCompanyProfile,
+  }, 
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile,
   }
 ];
 
