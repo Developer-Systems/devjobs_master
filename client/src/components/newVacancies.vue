@@ -137,8 +137,8 @@
           <br />
           <br />
 
-          <div class="submit">
-            <button type="submit" class="btn btn-primary enviar">
+          <div class="submit d-flex justify-content-around">
+            <button type="submit" class="get-started-btn p-1  enviar">
               PUBLICAR
             </button>
           </div>

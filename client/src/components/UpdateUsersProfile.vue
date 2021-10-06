@@ -161,6 +161,47 @@
                 value=""
               />
             </div>
+            <br />
+
+            <label class="labels">Habilidades</label
+              >
+            <div class="row ">
+              <div class="row justify-content-around btn-toolbar boton col-md">
+                <button input type="button" class="col-3 m-2 btn btn-light">HTML</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">CSS</button>
+                <button input type="button" class="col-3 m-2 btn btn-light"> JSCRIPT</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">PHP</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">SQL</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">NODE</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">VUEJS</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">REDUX</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">ANGULAR</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">MVC</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">PYTHON</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">ORM</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">SASS</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">JQUERY</button>
+                <button input type="button" class="col-3 m-2 btn btn-light"> FLEXBOX</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">CSSGRID</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">LARAVEL</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">JAVA</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
