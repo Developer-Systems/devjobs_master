@@ -6,37 +6,37 @@ import * as usersCtrl from "../controllers/user.controller";
 import * as vacancyCtrl from "../controllers/vacancy.controller";
 import { authJwt, verifySignup } from "../middlewares";
 
-router.get("/vancancy/", vacancyCtrl.getvacancy);
+router.get("/vancancy/", () =>{ vacancyCtrl.getvacancy});
 
-router.get("/vancancy/:vacancyId", vacancyCtrl.getvacancyById);
+router.get("/vancancy/:vacancyId", () =>{ vacancyCtrl.getvacancyById });
 
 router.post(
-  "/vancancy/",
+  "/vancancy/", () =>{
   [authJwt.verifyToken, authJwt.isModerator],
   vacancyCtrl.createVacancy
-);
+  });
 
 router.put(
-  "/vancancy/:vacancyId",
+  "/vancancy/:vacancyId", () => {
   [authJwt.verifyToken, authJwt.isModerator],
   vacancyCtrl.updateVacancyById
-);
+  });
 
 router.delete(
-  "/vancancy/:vacancyId",
+  "/vancancy/:vacancyId", () =>{
   [authJwt.verifyToken, authJwt.isAdmin],
   vacancyCtrl.deleteVacancyById
-);
+  });
 
 router.post(
-  "/user/",
+  "/user/", () => {
   [
     authJwt.verifyToken,
     authJwt.isAdmin,
     verifySignup.checkDuplicateUsernameOrEmail,
   ],
   usersCtrl.createUser
-);
+  });
 
 router.use((req, res, next) => {
   res.header(
@@ -47,11 +47,11 @@ router.use((req, res, next) => {
 });
 
 router.post(
-  "/auth/signup",
+  "/auth/signup", () =>{
   [verifySignup.checkDuplicateUsernameOrEmail, verifySignup.checkRolesExisted],
   authCtrl.signUp
-);
+  });
 
-router.post("/auth/signin", authCtrl.signin);
+router.post("/auth/signin", () =>{ authCtrl.signin});
 
 export default router;

@@ -1,5 +1,5 @@
-import Role from "../models/Role";
-import User from "../models/User";
+import Role from "../models/Roles";
+import User from "../models/Usuarios";
 
 import bcrypt from "bcryptjs";
 
