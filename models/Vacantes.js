@@ -1,8 +1,6 @@
-import mongoose from 'mongoose';
-import slug from 'slug';
-import shortid from 'shortid';
+import { Schema, model } from "mongoose";
 
-const vacantesSchema =  new mongoose.Schema({
+const vacantesSchema =  new Schema({
     titulo: {
         type: String, 
         required: 'El nombre de la vacante es obligatorio',
@@ -51,16 +49,13 @@ const vacantesSchema =  new mongoose.Schema({
     }
 });
 vacantesSchema.pre('save', function(next) {
-
     // crear la url
     const url = slug(this.titulo);
     this.url = `${url}-${shortid.generate()}`;
-
     next();
 })
-
 // Crear un indice
 vacantesSchema.index({ titulo : 'text' });
 
 
-module.exports = mongoose.model('Vacante', vacantesSchema);
+export default model('Vacante', vacantesSchema);

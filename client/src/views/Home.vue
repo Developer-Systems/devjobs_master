@@ -1,9 +1,17 @@
 <template>
+<<<<<<< HEAD
+    <div >
+    <Header/>
+    <Carrousel/>
+    <Footer/>
+    </div>
+=======
   <div>
     <component :is="layout"></component>
     <Carrousel />
     <Footer />
   </div>
+>>>>>>> cf374c6b9cf40e01226db6e59dc17230a4ee9bac
 </template>
 
 <script>
