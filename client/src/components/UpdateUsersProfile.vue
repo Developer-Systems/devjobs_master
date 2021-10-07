@@ -163,8 +163,7 @@
             </div>
             <br />
 
-            <label class="labels">Habilidades</label
-              >
+            <label class="labels">Habilidades</label >
             <div class="row ">
               <div class="row justify-content-around btn-toolbar boton col-md">
                 <button input type="button" class="col-3 m-2 btn btn-light">HTML</button>
