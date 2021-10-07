@@ -1,9 +1,7 @@
 <template>
     <div >
     <Header/>
-    <div>
     <Carrousel/>
-    </div>
     <Footer/>
     </div>
 </template>

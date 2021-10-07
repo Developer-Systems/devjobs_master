@@ -3,16 +3,9 @@ module.exports = {
         devServer:{
             proxy:{
                 '/api':{
-                    target: 'http://localhost:3000',
+                    target: 'http://localhost:5000',
                 },
             },
         },
     },
-    css: {
-        loaderOptions: {
-          css: {
-            // options here will be passed to css-loader
-          },
-        },
-      },
-}
+  }

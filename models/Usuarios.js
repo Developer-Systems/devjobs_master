@@ -1,52 +1,40 @@
-import mongoose from 'mongoose';
-import bcrypt from'bcrypt';
+import { Schema, model } from "mongoose";
+import bcrypt from "bcryptjs";
 
-const usuariosSchema = new mongoose.Schema({
-    email: {
-        type: String,
-        unique: true,
-        lowercase: true,
-        trim: true,
+const userSchema = new Schema(
+  {
+    username: {
+      type: String,
+      unique: true,
     },
-    nombre: {
-        type: String,
-        required: true
+    email: {
+      type: String,
+      unique: true,
     },
     password: {
-        type: String,
-        required: true,
-        trim: true
-    }, 
-    token: String,
-    expira: Date, 
-    imagen: String
-});
+      type: String,
+      required: true,
+    },
+    roles: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Role",
+      },
+    ],
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  }
+);
 
-// Método para hashear los passwords
-usuariosSchema.pre('save', async function(next) {
-    // si el password ya esta hasheado
-    if(!this.isModified('password')) {
-        return next(); // deten la ejecución
-    }
-    // si no esta hasheado
-    const hash = await bcrypt.hash(this.password, 12);
-    this.password = hash;
-    next();
-});
-// Envia alerta cuando un usuario ya esta registrado
-usuariosSchema.post('save', function(error, doc, next) {
-    if(error.name === 'MongoError' && error.code === 11000 ){
-        next('Ese correo ya esta registrado');
-    } else {
-        next(error);
-    }
-});
+userSchema.statics.encryptPassword = async (password) => {
+  const salt = await bcrypt.genSalt(10);
+  return await bcrypt.hash(password, salt);
+};
 
-// Autenticar Usuarios
-usuariosSchema.methods = {
-    compararPassword: function(password) {
-        return bcrypt.compareSync(password, this.password);
-    }
+userSchema.statics.comparePassword = async (password, receivedPassword) => {
+  return await bcrypt.compare(password, receivedPassword)
 }
 
-module.exports = mongoose.model('Usuarios', usuariosSchema);
+export default model("User", userSchema);

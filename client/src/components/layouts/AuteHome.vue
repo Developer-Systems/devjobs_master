@@ -31,8 +31,8 @@
           id="form"
           class="form-control form-control-dark"
           placeholder="Search..."
-          label="Search"
         />
+        <button type="submit"><i class='bx bx-search-alt-2'></i></button>
         <button type="button" class="btn btn-outline-success">search</button>
       </form>
       <div class="d-flex">

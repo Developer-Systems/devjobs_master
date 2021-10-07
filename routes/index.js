@@ -1,91 +1,59 @@
-import {Router} from "express";
+import { Router } from "express";
 const router = Router();
-import * as vacantesController from '../controllers/vacantesController'
 
-// router.get('/', homeController.mostrarTrabajos);
+import * as authCtrl from "../controllers/auth.controller";
+import { verifySignup } from "../middlewares";
+import * as usersCtrl from "../controllers/user.controller";
+import { authJwt, verifySignup } from "../middlewares";
+import * as vacancyCtrl from "../controllers/vacancy.controller";
+import { authJwt } from "../middlewares";
 
-// Crear Vacantes
-router.get('/vacantes/nueva',  
-    vacantesController.formularioNuevaVacante
-);
-router.post('/vacantes/nueva', 
-    vacantesController.validarVacante,
-    vacantesController.agregarVacante
-);
+router.get("/", vacancyCtrl.getvacancy);
 
-// Mostrar Vacante (singular)
-router.get('/vacantes/:url',vacantesController.mostrarVacante );
+router.get("/:vancyId", vacancyCtrl.getvacancyById);
 
-// Editar Vacante
-router.get('/vacantes/editar/:url', 
-    vacantesController.formEditarVacante
-);
-router.post('/vacantes/editar/:url', 
-    vacantesController.validarVacante,
-    vacantesController.editarVacante
+router.post(
+  "/",
+  [authJwt.verifyToken, authJwt.isModerator],
+  vacancyCtrl.createVacancy
 );
 
-// Eliminar Vacantes
-router.put('/vacantes/cerrar/:id', 
-    vacantesController.cerrarVacante
+router.put(
+  "/:vacancyId",
+  [authJwt.verifyToken, authJwt.isModerator],
+  vacancyCtrl.updateVacancyById
 );
 
-// Crear Cuentas
-// router.get('/crear-cuenta', usuariosController.formCrearCuenta);
-// router.post('/crear-cuenta', 
-//     usuariosController.validarRegistro,
-//     usuariosController.crearUsuario
-// );
-
-// Autenticar Usuarios
-// router.get('/iniciar-sesion', usuariosController.formIniciarSesion);
-// router.post('/iniciar-sesion',authController.autenticarUsuario);
-// cerrar sesion
-// router.get('/cerrar-sesion',
-//     authController.verificarUsuario,
-//     authController.cerrarSesion
-// );
-
-// Resetear password (emails)
-// router.get('/reestablecer-password', authController.formReestablecerPassword);
-// router.post('/reestablecer-password', authController.enviarToken);
-
-// Resetear Password ( Almacenar en la BD )
-// router.get('/reestablecer-password/:token', authController.reestablecerPassword);
-// router.post('/reestablecer-password/:token', authController.guardarPassword);
-
-
-// Panel de administración
-// router.get('/administracion',
-//     authController.verificarUsuario,
-//     authController.mostrarPanel
-// );
-
-// Editar Perfil
-// router.get('/editar-perfil', 
-//     authController.verificarUsuario,
-//     usuariosController.formEditarPerfil
-// );
-// router.post('/editar-perfil', 
-//     authController.verificarUsuario,
-//     // usuariosController.validarPerfil,
-//     usuariosController.subirImagen,
-//     usuariosController.editarPerfil
-// )
-
-// Recibir Mensajes de Candidatos
-router.post('/vacantes/:url', 
-    vacantesController.subirCV,
-    vacantesController.contactar
+router.delete(
+  "/:vacancyId",
+  [authJwt.verifyToken, authJwt.isAdmin],
+  vacancyCtrl.deleteVacancyById
 );
 
-// Muestra los candidatos por vacante
-router.get('/candidatos/:id', 
-    vacantesController.mostrarCandidatos
-)
+router.post(
+  "/",
+  [
+    authJwt.verifyToken,
+    authJwt.isAdmin,
+    verifySignup.checkDuplicateUsernameOrEmail,
+  ],
+  usersCtrl.createUser
+);
 
-// Buscador de Vacantes
-router.post('/buscador', vacantesController.buscarVacantes);
+router.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Headers",
+    "x-access-token, Origin, Content-Type, Accept"
+  );
+  next();
+});
 
+router.post(
+  "/signup",
+  [verifySignup.checkDuplicateUsernameOrEmail, verifySignup.checkRolesExisted],
+  authCtrl.signUp
+);
 
-module.exports = router;
+router.post("/signin", authCtrl.signin);
+
+export default router;
