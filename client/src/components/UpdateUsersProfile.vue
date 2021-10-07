@@ -1,15 +1,15 @@
 <template>
   <div class="body ">
-    <div class="container rounded mt-5 mb-5 text-white">
+    <div class="container rounded mt-6 mb-5 text-white">
       <div class="row">
         <div class="col-md-3 border-right">
           <div
             class="d-flex flex-column align-items-center text-center p-3 py-5"
           >
-            <img
+            <img alt ="Foto Perfil Usuario"
               class="rounded-circle border borde-white border-3 mt-5"
               width="150px"
-              src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_man_beard_brown_hair_boy_people_icon_159121.png"
+              src="https://thumbs.dreamstime.com/b/retrato-masculino-del-icono-del-perfil-del-hombre-de-negocios-plano-47075253.jpg"
             /><span class="mt-3 font-weight-bold">John Armando Casas</span
             ><span class="text-white-50">DevJobs@mail.com</span><span> </span>
           </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="row mt-3">
               <div class="col-md-12">
-                <label class="labels">Ciudad de recidencia</label
+                <label class="labels">Ciudad de residencia</label
                 ><input
                   type="text"
                   class="form-control"
@@ -61,7 +61,7 @@
               </div>
 
               <div class="col-md-12">
-                <label class="labels">Telefono</label
+                <label class="labels">Teléfono</label
                 ><input
                   type="text"
                   class="form-control"
@@ -75,7 +75,7 @@
                 ><input
                   type="text"
                   class="form-control"
-                  placeholder=" email"
+                  placeholder=" Email"
                   value=""
                 />
               </div>
@@ -84,7 +84,7 @@
                 ><input
                   type="text"
                   class="form-control"
-                  placeholder="educación"
+                  placeholder="Educación"
                   value=""
                 />
               </div>
@@ -115,12 +115,12 @@
                   type="text"
                   class="form-control"
                   value=""
-                  placeholder="ciudad"
+                  placeholder="Ciudad"
                 />
               </div>
             </div>
             <div class="mt-5 text-center">
-              <button class="btn btn-primary profile-button" type="button">
+              <button class="get-started-btn profile-button" type="button">
                 Guardar
               </button>
             </div>
@@ -138,7 +138,7 @@
             >
               <span>Edit.</span
               ><span class="border px-3 p-1 add-experience"
-                ><i class="fa fa-plus"></i>&nbsp;Experiencia</span
+                ><em class="fa fa-plus"></em>&nbsp;Experiencia</span
               >
             </div>
             <br />
@@ -147,7 +147,7 @@
               ><input
                 type="text"
                 class="form-control"
-                placeholder="experience"
+                placeholder="Experience"
                 value=""
               />
             </div>
@@ -160,6 +160,47 @@
                 placeholder="Detalles adicionales"
                 value=""
               />
+            </div>
+            <br />
+
+            <label class="labels">Habilidades</label
+              >
+            <div class="row ">
+              <div class="row justify-content-around btn-toolbar boton col-md">
+                <button input type="button" class="col-3 m-2 btn btn-light">HTML</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">CSS</button>
+                <button input type="button" class="col-3 m-2 btn btn-light"> JSCRIPT</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">PHP</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">SQL</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">NODE</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">VUEJS</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">REDUX</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">ANGULAR</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">MVC</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">PYTHON</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">ORM</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">SASS</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">JQUERY</button>
+                <button input type="button" class="col-3 m-2 btn btn-light"> FLEXBOX</button>
+              </div>
+
+              <div class="row justify-content-around btn-toolbar boton">
+                <button input type="button" class="col-3 m-2 btn btn-light">CSSGRID</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">LARAVEL</button>
+                <button input type="button" class="col-3 m-2 btn btn-light">JAVA</button>
+              </div>
             </div>
           </div>
         </div>
