@@ -2,7 +2,7 @@ import User from "../models/Usuarios";
 import Role from "../models/Roles";
 
 import jwt from "jsonwebtoken";
-import config from "../config";
+import config from "../config/config";
 
 export const signUp = async (req, res) => {
   try {
