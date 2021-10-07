@@ -207,7 +207,6 @@ export default {
   background-color: #100e17;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .breadcrumb {

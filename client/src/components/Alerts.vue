@@ -215,7 +215,6 @@ html {
   background-color: #100e17;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 a {
   text-decoration: none !important;
