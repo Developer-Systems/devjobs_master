@@ -3,7 +3,7 @@ const Vacante = require("../models/Vacantes");
 module.exports = class VacancyController{
   static async getVacancy (request, response) {
     try {
-      const vacancies = await Vacante;
+      const vacancies = await Vacante.find();
       response.status(200).json(vacancies);
     } catch (error) {
       response.status(400).json({message: error.message});
