@@ -1,37 +1,57 @@
-import User from "../models/Usuarios";
-import Role from "../models/Roles";
+const User = require("../models/Usuarios");
 
-export const createUser = async (req, res) => {
-  try {
-    const { username, email, password, roles } = req.body;
+module.exports = class UserController{
+  static async createUser (request, response) {
+    try {
+      const {username,email,password,role}= request.body;
+      const newUser = new User (
+        {
+          username,
+          email,
+          password : await User.encryptPassword(password),
+          role
+        }
+      )
+      const user = await User.create(newUser);
 
-    const rolesFound = await Role.find({ name: { $in: roles } });
+      response.status(200).json(user);
+    } catch (error) {
+      response.status(400).json({message: error.message});
+    }
+  };
+}
 
-    // creating a new User
-    const user = new User({
-      username,
-      email,
-      password,
-      roles: rolesFound.map((role) => role._id),
-    });
+// export const createUser = async (req, res) => {
+//   try {
+//     const { username, email, password, roles } = req.body;
 
-    // encrypting password
-    user.password = await User.encryptPassword(user.password);
+//     const rolesFound = await Role.find({ name: { $in: roles } });
 
-    // saving the new user
-    const savedUser = await user.save();
+//     // creating a new User
+//     const user = new User({
+//       username,
+//       email,
+//       password,
+//       roles: rolesFound.map((role) => role._id),
+//     });
 
-    return res.status(200).json({
-      _id: savedUser._id,
-      username: savedUser.username,
-      email: savedUser.email,
-      roles: savedUser.roles,
-    });
-  } catch (error) {
-    console.error(error);
-  }
-};
+//     // encrypting password
+//     user.password = await User.encryptPassword(user.password);
 
-export const getUsers = async (req, res) => {};
+//     // saving the new user
+//     const savedUser = await user.save();
 
-export const getUser = async (req, res) => {};
+//     return res.status(200).json({
+//       _id: savedUser._id,
+//       username: savedUser.username,
+//       email: savedUser.email,
+//       roles: savedUser.roles,
+//     });
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
+// export const getUsers = async (req, res) => {};
+
+// export const getUser = async (req, res) => {};

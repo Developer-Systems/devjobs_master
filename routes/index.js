@@ -1,57 +1,66 @@
-import { Router } from "express";
-const router = Router();
+const express = require("express");
 
-import * as authCtrl from "../controllers/auth.controller";
-import * as usersCtrl from "../controllers/user.controller";
-import * as vacancyCtrl from "../controllers/vacancy.controller";
-import { authJwt, verifySignup } from "../middlewares";
+const VacancyController = require("../controllers/vacancy.Controller");
+const UserController = require("../controllers/user.Controller");
+const AuthController = require("../controllers/auth.Controller");
 
-router.get("/vancancy/", () =>{ vacancyCtrl.getvacancy});
+const router = express.Router();
 
-router.get("/vancancy/:vacancyId", () =>{ vacancyCtrl.getvacancyById });
+router.get('/vancancy', VacancyController.getVacancy);
+router.post('/auth/signup', UserController.createUser);
+router.post("/auth/signin", AuthController.signIn);
+router.post("/vancancy/create", VacancyController.createVacancy);
 
-router.post(
-  "/vancancy/", () =>{
-  [authJwt.verifyToken, authJwt.isModerator],
-  vacancyCtrl.createVacancy
-  });
+// router.post(
+//       "/auth/signup", () =>{
+//       [verifySignup.checkDuplicateUsernameOrEmail, verifySignup.checkRolesExisted],
+//       authCtrl.signUp
+//       });
 
-router.put(
-  "/vancancy/:vacancyId", () => {
-  [authJwt.verifyToken, authJwt.isModerator],
-  vacancyCtrl.updateVacancyById
-  });
+// router.get("/vancancy/:vacancyId", () =>{ vacancyCtrl.getvacancyById });
 
-router.delete(
-  "/vancancy/:vacancyId", () =>{
-  [authJwt.verifyToken, authJwt.isAdmin],
-  vacancyCtrl.deleteVacancyById
-  });
+// router.post(
+//   "/vancancy/", () =>{
+//   [authJwt.verifyToken, authJwt.isModerator],
+//   vacancyCtrl.createVacancy
+//   });
 
-router.post(
-  "/user/", () => {
-  [
-    authJwt.verifyToken,
-    authJwt.isAdmin,
-    verifySignup.checkDuplicateUsernameOrEmail,
-  ],
-  usersCtrl.createUser
-  });
+// router.put(
+//   "/vancancy/:vacancyId", () => {
+//   [authJwt.verifyToken, authJwt.isModerator],
+//   vacancyCtrl.updateVacancyById
+//   });
 
-router.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Headers",
-    "x-access-token, Origin, Content-Type, Accept"
-  );
-  next();
-});
+// router.delete(
+//   "/vancancy/:vacancyId", () =>{
+//   [authJwt.verifyToken, authJwt.isAdmin],
+//   vacancyCtrl.deleteVacancyById
+//   });
 
-router.post(
-  "/auth/signup", () =>{
-  [verifySignup.checkDuplicateUsernameOrEmail, verifySignup.checkRolesExisted],
-  authCtrl.signUp
-  });
+// router.post(
+//   "/user/", () => {
+//   [
+//     authJwt.verifyToken,
+//     authJwt.isAdmin,
+//     verifySignup.checkDuplicateUsernameOrEmail,
+//   ],
+//   usersCtrl.createUser
+//   });
 
-router.post("/auth/signin", () =>{ authCtrl.signin});
+// router.use((req, res, next) => {
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "x-access-token, Origin, Content-Type, Accept"
+//   );
+//   next();
+// });
 
-export default router;
+// router.post(
+//   "/auth/signup", () =>{
+//   [verifySignup.checkDuplicateUsernameOrEmail, verifySignup.checkRolesExisted],
+//   authCtrl.signUp
+//   });
+
+// router.post("/auth/signin", () =>{ authCtrl.signin});
+
+module.exports = router;

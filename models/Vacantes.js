@@ -1,11 +1,11 @@
-import { Schema, model } from "mongoose";
+const mongoose = require("mongoose");
 
-const vacantesSchema =  new Schema({
+const vacantesSchema =  mongoose.Schema({
     titulo: {
-        type: String, 
+        type: String,
         required: 'El nombre de la vacante es obligatorio',
         trim : true
-    }, 
+    },
     empresa: {
         type: String,
         trim: true
@@ -28,6 +28,7 @@ const vacantesSchema =  new Schema({
         type: String,
         trim: true,
     },
+    //Generate URL
     url : {
         type: String,
         lowercase:true
@@ -41,21 +42,22 @@ const vacantesSchema =  new Schema({
         nombre: String,
         email: String,
         cv : String
-    }], 
+    }],
     autor : {
-        type: Schema.ObjectId, 
-        ref: 'Usuarios', 
+        type: String,
+        ref: 'Usuarios',
         required: 'El autor es obligatorio'
     }
 });
-vacantesSchema.pre('save', function(next) {
-    // crear la url
-    const url = slug(this.titulo);
-    this.url = `${url}-${shortid.generate()}`;
-    next();
-})
+// vacantesSchema.pre('save', function(next) {
+//     // crear la url
+//     const url = slug(this.titulo);
+//     this.url = `${url}-${shortid.generate()}`;
+//     next();
+// })
+
 // Crear un indice
 vacantesSchema.index({ titulo : 'text' });
 
 
-export default model('Vacante', vacantesSchema);
+module.exports = mongoose.model("Vacante", vacantesSchema);
