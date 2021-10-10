@@ -40,17 +40,17 @@
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                  <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                  <i class="bx bx-chevron-right"></i> <a href="#about">About us</a>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                  <i class="bx bx-chevron-right"></i> <a href="#services">Services</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a href="#">Terms of service</a>
+                  <a href="#team">Terms of service</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
@@ -75,7 +75,7 @@
           &copy; Copyright <strong><span>DevJobs</span></strong
           >. All Rights Reserved
         </div>
-        <div class="credits">Designed by <a href="https://devsystem.com.co/">Devsystem</a></div>
+        <div class="credits">Designed by <a class="footer_company" href="https://devsystem.com.co/">Devsystem</a></div>
       </div>
     </footer>
 </template>
