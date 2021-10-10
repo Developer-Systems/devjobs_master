@@ -1,22 +1,21 @@
 <template>
-     <div class="container">
+<div class="body">
+     <div class="container d-flex">
         <div class="card card-container">
             <form class="form-signin">
+                <input type="name" id="inputName" class="form-control" placeholder="Full name" required>
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div id="remember" class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarse</button>
             </form><!-- /form -->
-            <a href="/signin" class="forgot-password">
-                Sign in?
+            <a href="/signin" class="sign-in">
+                Iniciar sesión?
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
+    </div>
+</div>
 </template>
 
 <script>
@@ -26,7 +25,17 @@ export default {
 </script>
 
 <style scoped>
-body, html {
+.body {
+  font-family: "Mukta", sans-serif;
+  -ms-overflow-style: hidden !important;
+  overflow-y: hidden !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #100e17;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+html {
     height: 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
