@@ -3,12 +3,12 @@
       <div class="footer-top container-fluid">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-12">
               <div class="footer-info">
                 <h1 class="logo me-auto me-lg-0 w-8">
                   <a href="index.html"
                     ><img
-                      src="assets/img/logo_header_blanco.png"
+                      src="@/assets/img/logo_header_blanco.png"
                       alt=""
                       class="img-fluid"
                   /></a>
@@ -36,7 +36,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-2 col-md-6 footer-links">
+            <div class="col-lg-4 col-md-12 footer-links">
               <h4>Useful Links</h4>
               <ul>
                 <li>
@@ -58,41 +58,14 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Services</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Web Development</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Product Management</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Marketing</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Graphic Design</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 footer-newsletter">
-              <h4>Our Newsletter</h4>
-              <p>
-                Tamen quem nulla quae legam multos aute sint culpa legam noster
-                magna
-              </p>
-              <form action="" method="post">
-                <input type="email" name="email" /><input
-                  type="submit"
-                  value="Subscribe"
-                />
-              </form>
+            <div class="col-lg-4 col-md-12 footer-newsletter">
+              <h4>Location</h4>
+               <iframe
+              style="border: 0; width: 100%; height: 250px"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
             </div>
           </div>
         </div>
@@ -102,7 +75,7 @@
           &copy; Copyright <strong><span>DevJobs</span></strong
           >. All Rights Reserved
         </div>
-        <div class="credits">Designed by <a href="#">BootstrapMade</a></div>
+        <div class="credits">Designed by <a href="https://devsystem.com.co/">Devsystem</a></div>
       </div>
     </footer>
 </template>

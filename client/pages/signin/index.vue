@@ -1,5 +1,11 @@
 <template>
-    <div>
-    <h1>login</h1>
-    </div>
+  <div>
+    <Signin />
+  </div>
 </template>
+
+<script>
+export default {
+    layout: 'Signin'
+}
+</script>

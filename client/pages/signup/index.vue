@@ -1,6 +1,11 @@
 <template>
     <div>
-    <h1>register</h1>
+    <Signup/>
     </div>
 </template>
 
+<script>
+export default {
+    layout: 'Signup'
+}
+</script>
