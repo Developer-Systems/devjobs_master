@@ -1,5 +1,5 @@
 <template>
-  <Tutorial />
+  <Home />
 </template>
 
 <script>
@@ -17,10 +17,6 @@ export default {
           return document.querySelector(el)
         }
       }
-
-      /**
-       * Easy event listener function
-       */
       const on = (type, el, listener, all = false) => {
         let selectEl = select(el, all)
         if (selectEl) {
@@ -31,17 +27,9 @@ export default {
           }
         }
       }
-
-      /**
-       * Easy on scroll event listener
-       */
       const onscroll = (el, listener) => {
         el.addEventListener('scroll', listener)
       }
-
-      /**
-       * Navbar links active state on scroll
-       */
       let navbarlinks = select('#navbar .scrollto', true)
       const navbarlinksActive = () => {
         let position = window.scrollY + 200
@@ -62,9 +50,6 @@ export default {
       window.addEventListener('load', navbarlinksActive)
       onscroll(document, navbarlinksActive)
 
-      /**
-       * Scrolls to an element with header offset
-       */
       const scrollto = (el) => {
         let header = select('#header')
         let offset = header.offsetHeight
@@ -76,9 +61,6 @@ export default {
         })
       }
 
-      /**
-       * Toggle .header-scrolled class to #header when page is scrolled
-       */
       let selectHeader = select('#header')
       if (selectHeader) {
         const headerScrolled = () => {
@@ -92,9 +74,6 @@ export default {
         onscroll(document, headerScrolled)
       }
 
-      /**
-       * Back to top button
-       */
       let backtotop = select('.back-to-top')
       if (backtotop) {
         const toggleBacktotop = () => {
@@ -108,18 +87,12 @@ export default {
         onscroll(document, toggleBacktotop)
       }
 
-      /**
-       * Mobile nav toggle
-       */
       on('click', '.mobile-nav-toggle', function (e) {
         select('#navbar').classList.toggle('navbar-mobile')
         this.classList.toggle('bi-list')
         this.classList.toggle('bi-x')
       })
 
-      /**
-       * Mobile nav dropdowns activate
-       */
       on(
         'click',
         '.navbar .dropdown > a',
@@ -132,9 +105,6 @@ export default {
         true
       )
 
-      /**
-       * Scrool with ofset on links with a class name .scrollto
-       */
       on(
         'click',
         '.scrollto',
@@ -155,9 +125,6 @@ export default {
         true
       )
 
-      /**
-       * Scroll with ofset on page load with hash links in the url
-       */
       window.addEventListener('load', () => {
         if (window.location.hash) {
           if (select(window.location.hash)) {
@@ -166,9 +133,6 @@ export default {
         }
       })
 
-      /**
-       * Preloader
-       */
       let preloader = select('#preloader')
       if (preloader) {
         window.addEventListener('load', () => {
@@ -176,9 +140,6 @@ export default {
         })
       }
 
-      /**
-       * Clients Slider
-       */
       new Swiper('.clients-slider', {
         speed: 400,
         loop: true,
@@ -212,9 +173,6 @@ export default {
         },
       })
 
-      /**
-       * Porfolio isotope and filter
-       */
       window.addEventListener('load', () => {
         let portfolioContainer = select('.portfolio-container')
         if (portfolioContainer) {
@@ -246,16 +204,10 @@ export default {
         }
       })
 
-      /**
-       * Initiate portfolio lightbox
-       */
       const portfolioLightbox = GLightbox({
         selector: '.portfolio-lightbox',
       })
 
-      /**
-       * Portfolio details slider
-       */
       new Swiper('.portfolio-details-slider', {
         speed: 400,
         loop: true,
@@ -270,9 +222,6 @@ export default {
         },
       })
 
-      /**
-       * Testimonials slider
-       */
       new Swiper('.testimonials-slider', {
         speed: 600,
         loop: true,
@@ -288,9 +237,6 @@ export default {
         },
       })
 
-      /**
-       * Animation on scroll
-       */
       window.addEventListener('load', () => {
         AOS.init({
           duration: 1000,
