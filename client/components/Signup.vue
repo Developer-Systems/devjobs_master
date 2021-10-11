@@ -1,44 +1,21 @@
 <template>
-  <div class="container">
-    <div class="card card-container mw-700">
-      <form class="form-signin">
-        <span id="reauth-email" class="reauth-email"></span>
-        <div class="row">
-          <div class="col-md-6 col-xl-6 col-sm-12">
-            <input
-              type="email"
-              id="inputEmail"
-              class="form-control"
-              placeholder="Email address"
-              required
-              autofocus
-            />
-          </div>
-          <div class="col-md-6 col-xl-6 col-sm-12">
-            <input
-              type="password"
-              id="inputPassword"
-              class="form-control"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <div class="col-md-6 col-xl-6 col-sm-12"></div>
-          <div class="col-md-6 col-xl-6 col-sm-12"></div>
-          <div class="col-md-6 col-xl-6 col-sm-12"></div>
-        </div>
-        <button
-          class="btn btn-lg btn-primary btn-block btn-signin"
-          type="submit"
-        >
-          Sign up
-        </button>
-      </form>
-      <!-- /form -->
+ <div class="body">
+     <div class="container d-flex">
+        <div class="card card-container">
+            <form class="form-signin">
+                <input type="name" id="inputName" class="form-control" placeholder="Full name" required>
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarse</button>
+            </form><!-- /form -->
+            <a href="/signin" class="sign-in">
+                Iniciar sesión?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
     </div>
-    <!-- /card-container -->
-  </div>
-  <!-- /container -->
+</div>
 </template>
 
 <script>
@@ -46,17 +23,25 @@ export default {}
 </script>
 
 <style scoped>
+.body {
+  font-family: "Mukta", sans-serif;
+  -ms-overflow-style: hidden !important;
+  overflow-y: hidden !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #100e17;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 
 .mw-700{
         max-width: 700px !important;
 }
 
-body,
-html {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
-}
 
 .card-container.card {
   max-width: 350px;

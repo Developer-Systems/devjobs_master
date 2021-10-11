@@ -1,6 +1,6 @@
 <template>
     <div>
-    <Auth_header/>
+    <Default/>
     <Nuxt/>
     </div>
 </template>

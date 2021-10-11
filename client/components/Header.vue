@@ -43,3 +43,11 @@
 <script>
 export default {}
 </script>
+<style>
+.ap-1 {
+  padding: 10px !important;
+}
+.navbar {
+  color: black;
+}
+</style>
