@@ -81,7 +81,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'http://fonts.cdnfonts.com/css/crystal-symphony-personal-use-only',
+        href: 'https://fonts.googleapis.com/css2?family=Birthstone&family=Courgette&display=swap',
       },
     ],
     script: [

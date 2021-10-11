@@ -6,7 +6,7 @@
     >
       <h1 class="logo me-lg-0 ">
         <router-link to="/jobs-list" exact-path class="nav-link scrollto"><img
-            src="../../assets/images/logo/logo_header_blanco.png"
+            src="@/assets/img/logo_header_blanco.png"
             alt=""
             class="img-fluid"
         /></router-link>
@@ -88,7 +88,6 @@ export default {
 };
 </script>
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Mukta");
 .navbar {
   color: black;
 }
