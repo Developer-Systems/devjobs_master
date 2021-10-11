@@ -171,8 +171,8 @@ export default {
           name: 'Authorization'
         },
         user: {
-          property: "user",
-          autoFetch: true
+          property: false,
+          autoFetch: false
         },
         endpoints: {
           login: { url: '/api/auth/signin', method: 'post' },

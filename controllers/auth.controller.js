@@ -12,13 +12,19 @@ module.exports = class AuthController{
       const matchPassword = await User.comparePassword(request.body.password, userFound.password);
       if (!matchPassword)
         return response.status(401).json({
-          token: null,
           message: "Invalid Password",
+          code: 101
       });
       const token = jwt.sign({ id: userFound._id }, conf.default.SECRET,  {
         expiresIn: 86400, // 24 hours
       });
-      response.status(200).json(token);
+      let res = {
+        token: token,
+        rol: userFound.rol,
+        code: 100,
+        msg: 'inicio de sesión con exito'
+      }
+      response.status(200).json(res);
     } catch (error) {
       response.status(400).json({message: error.message});
     }

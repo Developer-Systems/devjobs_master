@@ -1,6 +1,6 @@
 <template>
   <div class="body d-flex justify-content-center">
-    <div class="container">
+    <div id="signupContainer" class="container">
       <div class="card card-container">
         <form class="form-signin" v-on:submit.prevent="register">
           <input
@@ -29,14 +29,13 @@
             placeholder="Contraseña"
             required
           />
-          <div class="row">
-          <div class="col-md-6">
-          <input type="checkbox" name="user" id="company" v-model="rol">
-          </div>
-          <div class="col-md-6">
-          <input type="checkbox" name="company" id="company" v-model="rol">
-          </div>
-          </div>
+          <input type="radio" id="user" value="user" v-model="rol" />
+          <label for="uno">User</label>
+          <br />
+          <input type="radio" id="company" value="company" v-model="rol" />
+          <label for="Dos">Company</label>
+          <br />
+          <br />
           <button
             class="btn btn-lg btn-primary btn-block btn-signin"
             type="submit"
@@ -45,7 +44,6 @@
           </button>
         </form>
         <!-- /form -->
-        <a href="/signin" class="sign-in"> Iniciar sesión? </a>
       </div>
       <!-- /card-container -->
     </div>
@@ -66,30 +64,36 @@ export default {
   methods: {
     async register() {
       let data = {
-        name: this.name,
+        username: this.name,
         email: this.email,
         password: this.password,
         rol: this.rol,
       }
+      console.log(data)
       try {
-        await this.$axios.post('/api/auth/signup', data).then((response) => {
+        await this.$axios.post('api/auth/signup', data).then((response) => {
           this.$swal({
-          icon: 'success',
-          title: 'Registro Exitoso',
-        });
-        }) 
+            icon: 'success',
+            title: 'Registro Exitoso',
+          })
+        })
       } catch (error) {
         this.$swal({
           icon: 'error',
           title: error,
-        });
+        })
       }
-    }
+    },
   },
 }
 </script>
 
 <style scoped>
+#signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .body {
   font-family: 'Mukta', sans-serif;
   -ms-overflow-style: hidden !important;

@@ -3,13 +3,13 @@ const User = require("../models/Usuarios");
 module.exports = class UserController{
   static async createUser (request, response) {
     try {
-      const {username,email,password,role}= request.body;
+      const {username,email,password,rol}= request.body;
       const newUser = new User (
         {
           username,
           email,
           password : await User.encryptPassword(password),
-          role
+          rol
         }
       )
       const user = await User.create(newUser);
