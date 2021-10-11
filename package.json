@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "nodemon ./index.js --exec babel-node --ignore 'client'",
     "client": " npm run dev --prefix client",
-    "deploy": "node ./index.js --exec babel-node --ignore 'client'",
+    "deploy": "babel-node ./index.js --ignore 'client'",
     "start": "concurrently \" npm run deploy\" \"npm run client\"",
     "dev": "concurrently \" npm run serve\" \"npm run client\""
   },
