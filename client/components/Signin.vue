@@ -18,6 +18,7 @@
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
+</div>
 </template>
 
 <script>

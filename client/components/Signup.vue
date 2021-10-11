@@ -1,21 +1,46 @@
 <template>
- <div class="body">
-     <div class="container d-flex">
-        <div class="card card-container">
-            <form class="form-signin">
-                <input type="name" id="inputName" class="form-control" placeholder="Full name" required>
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarse</button>
-            </form><!-- /form -->
-            <a href="/signin" class="sign-in">
-                Iniciar sesión?
-            </a>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+  <div class="body">
+    <div class="container d-flex">
+      <div class="card card-container">
+        <form class="form-signin">
+          <input
+            type="text"
+            id="name"
+            v-model="name"
+            class="form-control"
+            placeholder="Full name"
+            required
+          />
+          <span id="reauth-email" class="reauth-email"></span>
+          <input
+            type="email"
+            id="inputEmail"
+            class="form-control"
+            placeholder="Correo electrónico"
+            required
+            autofocus
+          />
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control"
+            placeholder="Contraseña"
+            required
+          />
+          <button
+            class="btn btn-lg btn-primary btn-block btn-signin"
+            type="submit"
+          >
+            Registrarse
+          </button>
+        </form>
+        <!-- /form -->
+        <a href="/signin" class="sign-in"> Iniciar sesión? </a>
+      </div>
+      <!-- /card-container -->
     </div>
-</div>
+    <!-- /container -->
+  </div>
 </template>
 
 <script>
@@ -24,7 +49,7 @@ export default {}
 
 <style scoped>
 .body {
-  font-family: "Mukta", sans-serif;
+  font-family: 'Mukta', sans-serif;
   -ms-overflow-style: hidden !important;
   overflow-y: hidden !important;
   width: 100vw;
@@ -32,16 +57,15 @@ export default {}
   background-color: #100e17;
   background-repeat: no-repeat;
   background-size: cover;
-  }
-html {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
-
-.mw-700{
-        max-width: 700px !important;
 }
-
+html {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
+.mw-700 {
+  max-width: 700px !important;
+}
 
 .card-container.card {
   max-width: 350px;
