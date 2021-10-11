@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    layout: 'Signup'
+    layout: 'LayoutSignup'
 }
 </script>

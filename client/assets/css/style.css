@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover i {
-  color: #22B573;;
+  color: #22B573;
 }
 
 .back-to-top.active {
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 0px);
   left: calc(50% - 30px);
-  border: 6px solid #ffc451;
+  border: 6px solid #22B573;
   border-top-color: #151515;
   border-bottom-color: #151515;
   border-radius: 50%;
