@@ -29,8 +29,8 @@
         <button type="button" class="btn btn-outline-success">search</button>
       </form>
       <div class="d-flex">
-        <router-link to="/autentication" exact-path  class="get-started-btn scrollto m-1 center ap-1">Iniciar sesión</router-link>
-        <router-link to="/autentication" exact-path class="get-started-btn scrollto m-1 center ap-1">Registrarse</router-link>
+        <router-link to="/signin" exact-path  class="get-started-btn scrollto m-1 center ap-1">Iniciar sesión</router-link>
+        <router-link to="/signup" exact-path class="get-started-btn scrollto m-1 center ap-1">Registrarse</router-link>
       </div>
     </nav>
   </header>
