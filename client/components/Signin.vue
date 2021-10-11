@@ -1,6 +1,6 @@
 <template>
-<div class="body">
-     <div class="Container d-flex">
+<div class="body d-flex justify-content-center">
+     <div class="Container">
         <div class="card card-container">
             <form class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
@@ -18,6 +18,7 @@
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
+</div>
 </template>
 
 <script>

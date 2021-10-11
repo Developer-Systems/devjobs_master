@@ -1,6 +1,6 @@
 <template>
- <div class="body">
-     <div class="container d-flex">
+ <div class="body d-flex justify-content-center">
+     <div class="container">
         <div class="card card-container">
             <form class="form-signin">
                 <input type="name" id="inputName" class="form-control" placeholder="Full name" required>
@@ -37,7 +37,7 @@ html {
     height: 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
-
+}
 .mw-700{
         max-width: 700px !important;
 }
