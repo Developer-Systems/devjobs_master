@@ -1,8 +1,8 @@
 <template>
-  <div class="body">
-    <div class="container d-flex">
+  <div class="body d-flex justify-content-center">
+    <div class="container">
       <div class="card card-container">
-        <form class="form-signin">
+        <form class="form-signin" v-on:submit.prevent="register">
           <input
             type="text"
             id="name"
@@ -14,7 +14,8 @@
           <span id="reauth-email" class="reauth-email"></span>
           <input
             type="email"
-            id="inputEmail"
+            id="email"
+            v-model="email"
             class="form-control"
             placeholder="Correo electrónico"
             required
@@ -22,11 +23,20 @@
           />
           <input
             type="password"
-            id="inputPassword"
+            id="pass"
+            v-model="password"
             class="form-control"
             placeholder="Contraseña"
             required
           />
+          <div class="row">
+          <div class="col-md-6">
+          <input type="checkbox" name="user" id="company" v-model="rol">
+          </div>
+          <div class="col-md-6">
+          <input type="checkbox" name="company" id="company" v-model="rol">
+          </div>
+          </div>
           <button
             class="btn btn-lg btn-primary btn-block btn-signin"
             type="submit"
@@ -44,7 +54,39 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      rol: '',
+    }
+  },
+  methods: {
+    async register() {
+      let data = {
+        name: this.name,
+        email: this.email,
+        password: this.password,
+        rol: this.rol,
+      }
+      try {
+        await this.$axios.post('/api/auth/signup', data).then((response) => {
+          this.$swal({
+          icon: 'success',
+          title: 'Registro Exitoso',
+        });
+        }) 
+      } catch (error) {
+        this.$swal({
+          icon: 'error',
+          title: error,
+        });
+      }
+    }
+  },
+}
 </script>
 
 <style scoped>

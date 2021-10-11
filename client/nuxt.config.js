@@ -145,10 +145,43 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/auth-next',
+    'vue-sweetalert2/nuxt',
   ],
 
+  sweetalert: {
+    confirmButtonColor: '#41b882',
+    cancelButtonColor: '#ff7674'
+  },
+  
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL:'http://localhost:5000/'
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        url: 'http://localhost:5000',
+        token: {
+          property: 'token',
+          global: true,
+          required: true,
+          type: 'Bearer',
+          name: 'Authorization'
+        },
+        user: {
+          property: "user",
+          autoFetch: true
+        },
+        endpoints: {
+          login: { url: '/api/auth/signin', method: 'post' },
+          logout: false,
+          // user: { url: '/api/com_usuarios/me', method: 'get' },
+        }
+      }
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -161,5 +194,7 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, ctx) {},
+  },
 }
