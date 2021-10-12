@@ -1,15 +1,15 @@
-import express from 'express';
-import dovent from 'dotenv';
-import morgan from 'morgan';
-import cors from 'cors';
-import helmet from 'helmet';
+const express = require ('express');
+const dovent = require ('dotenv');
+const morgan = require ('morgan');
+const cors = require ('cors');
+const helmet = require ('helmet');
 require("./config/db")
-import cookieParser from "cookie-parser";
-import session from "express-session";
-import MongoStore from 'connect-mongo';
-import router from './routes/index'
+const cookieParser = require ("cookie-parser");
+const session = require ("express-session");
+const MongoStore = require ('connect-mongo');
+const router = require ('./routes/index');
 dovent.config({ path: "variables.env" });
-import { createRoles, createAdmin} from "./libs/initialSetup";
+const { createRoles, createAdmin} = require("./libs/initialSetup");
 const app = express();
 createRoles();
 createAdmin();
