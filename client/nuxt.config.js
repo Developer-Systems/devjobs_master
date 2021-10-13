@@ -145,8 +145,10 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+
     '@nuxtjs/auth-next',
-    'vue-sweetalert2/nuxt',
+
+    'vue-sweetalert2/nuxt'
   ],
 
   sweetalert: {
