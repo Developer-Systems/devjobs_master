@@ -146,14 +146,14 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/auth-next',
-    'vue-sweetalert2/nuxt',
+    'vue-sweetalert2/nuxt'
   ],
 
   sweetalert: {
     confirmButtonColor: '#41b882',
     cancelButtonColor: '#ff7674'
   },
-  
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL:'http://localhost:5000/'
@@ -170,18 +170,23 @@ export default {
           type: 'Bearer',
           name: 'Authorization'
         },
-        user: {
-          property: false,
-          autoFetch: false
-        },
         endpoints: {
           login: { url: '/api/auth/signin', method: 'post' },
           logout: false,
-          // user: { url: '/api/com_usuarios/me', method: 'get' },
+          user: false
+        },
+        redirect: {
+          login: '/signin',
+          logout: '/',
+          callback: '/signin',
+          home: '/jobslist'
         }
       }
     }
   },
+  proxy:{
+    //  '/api/': 'http://localhost:5000/api/',
+   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
