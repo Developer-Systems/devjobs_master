@@ -122,14 +122,14 @@ export default {
     '@/assets/vendor/glightbox/css/glightbox.min.css',
     '@/assets/vendor/remixicon/remixicon.css',
     '@/assets/vendor/swiper/swiper-bundle.min.css',
-    '@/assets/css/style.css'
+    '@/assets/css/style.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/main.js', ssr: true },
-  { src: '@/plugins/swiper.js', ssr: true }
-],
+    { src: '@/plugins/swiper.js', ssr: true },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -148,17 +148,17 @@ export default {
 
     '@nuxtjs/auth-next',
 
-    'vue-sweetalert2/nuxt'
+    'vue-sweetalert2/nuxt',
   ],
 
   sweetalert: {
     confirmButtonColor: '#41b882',
-    cancelButtonColor: '#ff7674'
+    cancelButtonColor: '#ff7674',
   },
-  
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL:'http://localhost:5000/'
+    baseURL: 'http://localhost:5000/',
   },
 
   auth: {
@@ -170,19 +170,24 @@ export default {
           global: true,
           required: true,
           type: 'Bearer',
-          name: 'Authorization'
-        },
-        user: {
-          property: false,
-          autoFetch: false
+          name: 'Authorization',
         },
         endpoints: {
           login: { url: '/api/auth/signin', method: 'post' },
           logout: false,
-          // user: { url: '/api/com_usuarios/me', method: 'get' },
-        }
-      }
-    }
+          user: false,
+        },
+        redirect: {
+          login: '/signin',
+          logout: '/',
+          callback: '/signin',
+          home: '/jobslist',
+        },
+      },
+    },
+  },
+  proxy: {
+    //  '/api/': 'http://localhost:5000/api/',
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
