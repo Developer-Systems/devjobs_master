@@ -37,17 +37,17 @@ const vacantesSchema =  mongoose.Schema({
         type: Boolean,
         default: 1
     },
-    skills: [String],
-    candidatos: [{
-        nombre: String,
-        email: String,
-        cv : String
-    }],
-    autor : {
-        type: String,
-        ref: 'Usuarios',
-        required: 'El autor es obligatorio'
-    }
+    skills: String,
+    // candidatos: [{
+    //     nombre: String,
+    //     email: String,
+    //     cv : String
+    // }],
+    // autor : {
+    //     type: String,
+    //     ref: 'Usuarios',
+    //     required: 'El autor es obligatorio'
+    // }
 });
 // vacantesSchema.pre('save', function(next) {
 //     // crear la url

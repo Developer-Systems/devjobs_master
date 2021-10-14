@@ -14,7 +14,7 @@
         <h4>General Information</h4>
         <br />
 
-        <form class="item">
+        <form class="item" v-on:submit.prevent="newVacancy">
           <div class="form-group">
             <label for="jobTitleVacancy">Tittle</label>
             <input
@@ -23,6 +23,7 @@
               id=""
               aria-describedby="jobTitleHelp"
               placeholder="Ej: React Developer"
+              v-model="titulo"
             />
           </div>
 
@@ -34,16 +35,7 @@
               id=""
               aria-describedby="companyHelp"
               placeholder="Company"
-            />
-          </div>
-          <div>
-            <label for="companyId">NIT</label>
-            <input
-              type="companyId"
-              class="form-control"
-              id=""
-              aria-describedby="idHelp"
-              placeholder="NIT"
+              v-model="empresa"
             />
           </div>
           <div>
@@ -54,6 +46,7 @@
               id=""
               aria-describedby="locationHelp"
               placeholder="Ej: Mexico or Remote"
+              v-model="ubicacion"
             />
           </div>
           <div>
@@ -64,14 +57,15 @@
               id=""
               aria-describedby="salaryHelp"
               placeholder="Ej: $500 USD"
+              v-model="salario"
             />
           </div>
           <div>
             <label for="employmentContract">Contract</label>
-            <select name="select" class="form-control">
-              <option value="value1">Undefined</option>
-              <option value="value2" selected>Fixed</option>
-              <option value="value3">Services</option>
+            <select name="select" class="form-control" v-model="contrato">
+              <option value="Undefined">Undefined</option>
+              <option value="Fixed" selected>Fixed</option>
+              <option value="Services">Services</option>
             </select>
           </div>
           <br />
@@ -80,71 +74,17 @@
             <label for="jobDescritption"><h4>Job Description</h4></label>
 
             <div class="form-group purple-border">
-              <textarea class="form-control" rows="3"></textarea>
+              <input class="form-control" rows="3" v-model="descripcion" />
             </div>
           </div>
           <br />
           <h4>Skills</h4>
           <div class="container">
-            <div class="row align-items-start">
-              <div class="btn-toolbar boton">
-                <button input type="button" class="btn btn-light">HTML</button>
-                <button input type="button" class="btn btn-light">CSS</button>
-                <button input type="button" class="btn btn-light">
-                  JSCRIPT
-                </button>
-              </div>
-
-              <div class="btn-toolbar boton">
-                <button input type="button" class="btn btn-light">PHP</button>
-                <button input type="button" class="btn btn-light">SQL</button>
-                <button input type="button" class="btn btn-light">NODE</button>
-              </div>
-
-              <div class="btn-toolbar boton">
-                <button input type="button" class="btn btn-light">VUEJS</button>
-                <button input type="button" class="btn btn-light">REDUX</button>
-                <button input type="button" class="btn btn-light">
-                  ANGULAR
-                </button>
-              </div>
-
-              <div class="btn-toolbar boton">
-                <button input type="button" class="btn btn-light">MVC</button>
-                <button input type="button" class="btn btn-light">
-                  PYTHON
-                </button>
-                <button input type="button" class="btn btn-light">ORM</button>
-              </div>
-
-              <div class="btn-toolbar boton">
-                <button input type="button" class="btn btn-light">SASS</button>
-                <button input type="button" class="btn btn-light">
-                  JQUERY
-                </button>
-                <button input type="button" class="btn btn-light">
-                  FLEXBOX
-                </button>
-              </div>
-
-              <div class="btn-toolbar boton">
-                <button input type="button" class="btn btn-light">
-                  CSSGRID
-                </button>
-                <button input type="button" class="btn btn-light">
-                  LARAVEL
-                </button>
-                <button input type="button" class="btn btn-light">JAVA</button>
-              </div>
-            </div>
+            <input class="form-control" v-model="skills" />
           </div>
-
-          <br />
-          <br />
-
           <div class="submit d-flex justify-content-around">
             <button type="submit" class="get-started-btn p-1 enviar">
-              Publish
+              Create
             </button>
           </div>
         </form>
@@ -162,10 +102,10 @@
 }
 .body {
   font-family: 'Mukta', sans-serif;
-  background-color: #100e17;
+  background: #100e17;
   background-repeat: repeat;
-  background-size: cover;
-  position: relative;
+  background-size: auto;
+  height: 100%;
 }
 .wrapper {
   display: grid;
@@ -194,3 +134,47 @@ button {
   margin-top: 0rem;
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      titulo: '',
+      empresa: '',
+      ubicacion: '',
+      salario: '',
+      contrato: '',
+      salario: '',
+      descripcion: '',
+      skills: '',
+    }
+  },
+  methods: {
+    async newVacancy() {
+      let data = {
+        titulo: this.titulo,
+        empresa: this.empresa,
+        ubicacion: this.ubicacion,
+        salario: this.salario,
+        contrato: this.contrato,
+        descripcion: this.descripcion,
+        skills: this.skills,
+      }
+      console.log(data)
+      try {
+        await this.$axios.post('api/vancancy/create', data).then((response) => {
+          this.$swal({
+            icon: 'success',
+            title: 'Nueva Vacante Creada',
+          })
+        })
+      } catch (error) {
+        this.$swal({
+          icon: 'error',
+          title: error,
+        })
+      }
+    },
+  },
+}
+</script>
