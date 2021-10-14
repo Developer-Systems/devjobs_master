@@ -1,17 +1,14 @@
 <template>
   <div class="body">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <div class="container">
-      <div class="text-light">
-        <h2><strong>New vacancy</strong></h2>
+    <div class="container mt-6">
+      <br />
+      <div class="text-light text-center">
+        <h1><strong>New vacancy</strong></h1>
         <p>Fill out the form and publish your vacancy</p>
+        <br />
       </div>
       <div action="" class="form-control">
-        <h4>General Information</h4>
+        <h4 class="text-center">General Information</h4>
         <br />
 
         <form class="item" v-on:submit.prevent="newVacancy">
@@ -22,7 +19,7 @@
               class="form-control"
               id=""
               aria-describedby="jobTitleHelp"
-              placeholder="Ej: React Developer"
+              placeholder="Ex: React Developer"
               v-model="titulo"
             />
           </div>
@@ -45,7 +42,7 @@
               class="form-control"
               id=""
               aria-describedby="locationHelp"
-              placeholder="Ej: Mexico or Remote"
+              placeholder="Ex: Mexico or Remote"
               v-model="ubicacion"
             />
           </div>
@@ -56,7 +53,7 @@
               class="form-control"
               id=""
               aria-describedby="salaryHelp"
-              placeholder="Ej: $500 USD"
+              placeholder="Ex: $500 USD"
               v-model="salario"
             />
           </div>
@@ -68,25 +65,23 @@
               <option value="Services">Services</option>
             </select>
           </div>
-          <br />
-
           <div>
-            <label for="jobDescritption"><h4>Job Description</h4></label>
-
+            <label for="jobDescritption">Job Description</label>
             <div class="form-group purple-border">
-              <input class="form-control" rows="3" v-model="descripcion" />
+              <input class="form-control" v-model="descripcion" />
             </div>
           </div>
-          <br />
-          <h4>Skills</h4>
-          <div class="container">
+          <label for="skills">Required Skills</label>
+          <div class="form-group purple-border m-1">
             <input class="form-control" v-model="skills" />
           </div>
+          <br />
           <div class="submit d-flex justify-content-around">
-            <button type="submit" class="get-started-btn p-1 enviar">
+            <button type="submit" class="get-started-btn p-1 m-1 enviar">
               Create
             </button>
           </div>
+          <br />
         </form>
       </div>
     </div>
@@ -98,14 +93,17 @@
   color: white !important;
 }
 .mt-6 {
-  margin-top: 5 rem;
+  position: relative;
+  top: 10% !important;
 }
 .body {
   font-family: 'Mukta', sans-serif;
-  background: #100e17;
-  background-repeat: repeat;
-  background-size: auto;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #100e17;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 .wrapper {
   display: grid;
@@ -128,10 +126,6 @@ button {
   color: #fff;
   background: #006837;
   box-shadow: none;
-}
-
-.container {
-  margin-top: 0rem;
 }
 </style>
 

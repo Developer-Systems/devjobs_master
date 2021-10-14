@@ -23,7 +23,7 @@
           <a class="nav-link scrollto active" href="/jobsList">Jobs List</a>
         </li>
         <li><a class="nav-link scrollto" href="/newVacancy">Create Vacancy</a></li>
-        <li><a class="nav-link scrollto" href="#services">Account</a></li>
+        <li><a class="nav-link scrollto" href="/updUserProfile">Account</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
       <form class="col-6 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto">

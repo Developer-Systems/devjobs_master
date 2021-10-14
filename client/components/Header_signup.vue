@@ -24,6 +24,6 @@ export default {}
 
 <style scoped>
 .bg-dark {
-  background-color: black !important;
+  background-color: #100e17 !important;
 }
 </style>
