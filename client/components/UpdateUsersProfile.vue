@@ -10,9 +10,9 @@
         /><span class="mt-3 font-weight-bold">John Armando Casas</span
         ><span class="text-white-50">DevJobs@mail.com</span><span> </span>
       </div>
-      <div class="p-3 py-5">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4 class="text-right">Edit Profile</h4>
+      <div class="p-3 py-3">
+        <div class="d-flex justify-content-center">
+          <h4 class="text-center"><strong>Edit Profile</strong></h4>
         </div>
         <div class="row mt-2">
           <div class="col-md-12">
@@ -53,8 +53,6 @@
               value=""
             />
           </div>
-        </div>
-        <div class="row mt-2">
           <div class="col-md-6">
             <label class="labels">Country</label
             ><input
@@ -73,23 +71,15 @@
               placeholder="City"
             />
           </div>
-          <div class="col-md-12">
-            <label class="labels"> Interests </label
-            ><input
-              type="text"
-              class="form-control"
-              rows="3"
-              value=""
-              placeholder="Tell us more"
-            />
-          </div>
-          <div class="col-md-12">
-            <label for="interests" class="form-label">Interests</label>
+          <div class="col-md-12 ">
+            <label class="labels">Interests</label>
             <textarea
+            type="text"
               class="form-control"
               id="interests"
               rows="3"
               placeholder="Tell us more"
+              value=""
             ></textarea>
           </div>
         </div>
