@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '',
+    title: 'Devjobs',
     meta: [
       {
         charset: 'utf-8',
@@ -14,7 +14,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: '',
+        content: 'Portal de empleos para desarrolladores',
       },
       {
         name: 'keywords',
@@ -30,7 +30,7 @@ export default {
       },
       {
         name: 'author',
-        content: 'John Andrade',
+        content: 'John Andrade, Juan Felipe Tamayo Viviana Castelblanco, Juan Pablo Aguirre, Santiago Pinilla',
       },
       {
         name: 'theme-color',
@@ -193,7 +193,54 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      name: 'DevJobs',
+      short_name: 'DevJobs',
+      description: 'Connecting talents and opportunities',
+      icons: [{
+          src: '/icon_64x64.png',
+          sizes: '64x64',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icon_120x120.png',
+          sizes: '120x120',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icon_144x144.png',
+          sizes: '144x144',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icon_152x152.png',
+          sizes: '152x152',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icon_192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icon_384x384.png',
+          sizes: '384x384',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icon_512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+      background_color: '#ffffff',
+      lang: 'es',
     },
   },
 
