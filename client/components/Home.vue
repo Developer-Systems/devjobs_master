@@ -45,7 +45,7 @@
               data-aos="fade-right"
               data-aos-delay="100"
             >
-              <About/>
+              <About />
             </div>
           </div>
         </div>
@@ -125,15 +125,36 @@
             <h2>Services</h2>
             <p>Check our Services</p>
           </div>
-          <div class="row">
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href="/signin">Jobs List</a></h4>
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-xl-4 col-md-6 col-sm-12"
+                v-for="vacancy in vacancies"
+                :key="vacancy._id"
+              >
+                <div class="card w-">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <strong>{{ vacancy.titulo }}</strong>
+                    </h5>
+                    <p class="card-text">
+                      {{ vacancy.descripcion }}
+                    </p>
+                    <p class="card-text">
+                      <strong>Company</strong>: {{ vacancy.empresa }}
+                    </p>
+                    <p class="card-text">
+                      <strong>Location</strong>: {{ vacancy.ubicacion }}
+                    </p>
+                    <p class="card-text">
+                      <strong>Salary</strong>: {{ vacancy.salario }}
+                    </p>
+                    <p class="card-text">
+                      <strong>Contract</strong>: {{ vacancy.contrato }}
+                    </p>
+                    <a href="/signin" class="btn btn-dark">Apply</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -151,17 +172,16 @@
             <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
               <div class="wrapper" data-aos="fade-up" data-aos-delay="400">
                 <div class="card front-face">
-                  <img
-                    src="@/assets/img/team/team-2.jpg"
-                  />
+                  <img src="@/assets/img/team/team-2.jpg" />
                 </div>
                 <div class="card back-face">
-                  <img
-                    src="@/assets/img/team/team-2.jpg"
-                  />
+                  <img src="@/assets/img/team/team-2.jpg" />
                   <div class="info">
                     <div class="title">Viviana Castelblanco</div>
-                    <p>User interface designer and <br />front-end and back-end developer</p>
+                    <p>
+                      User interface designer and <br />front-end and back-end
+                      developer
+                    </p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -175,17 +195,16 @@
             <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
               <div class="wrapper" data-aos="fade-up" data-aos-delay="100">
                 <div class="card front-face">
-                  <img
-                    src="@/assets/img/team/team-1.jpg"
-                  />
+                  <img src="@/assets/img/team/team-1.jpg" />
                 </div>
                 <div class="card back-face">
-                  <img
-                    src="@/assets/img/team/team-1.jpg"
-                  />
+                  <img src="@/assets/img/team/team-1.jpg" />
                   <div class="info">
                     <div class="title">John Andrade</div>
-                    <p>User interface designer and <br />front-end and back-end developer</p>
+                    <p>
+                      User interface designer and <br />front-end and back-end
+                      developer
+                    </p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -197,19 +216,18 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
-               <div class="wrapper" data-aos="fade-up" data-aos-delay="200">
+              <div class="wrapper" data-aos="fade-up" data-aos-delay="200">
                 <div class="card front-face">
-                  <img
-                    src="@/assets/img/team/team-3.jpg"
-                  />
+                  <img src="@/assets/img/team/team-3.jpg" />
                 </div>
                 <div class="card back-face">
-                  <img
-                    src="@/assets/img/team/team-3.jpg"
-                  />
+                  <img src="@/assets/img/team/team-3.jpg" />
                   <div class="info">
                     <div class="title">Juan Felipe Tamayo</div>
-                    <p>User interface designer and <br />front-end and back-end developer</p>
+                    <p>
+                      User interface designer and <br />front-end and back-end
+                      developer
+                    </p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -223,17 +241,16 @@
             <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
               <div class="wrapper" data-aos="fade-up" data-aos-delay="300">
                 <div class="card front-face">
-                  <img
-                    src="@/assets/img/team/team-4.jpg"
-                  />
+                  <img src="@/assets/img/team/team-4.jpg" />
                 </div>
                 <div class="card back-face">
-                  <img
-                    src="@/assets/img/team/team-4.jpg"
-                  />
+                  <img src="@/assets/img/team/team-4.jpg" />
                   <div class="info">
                     <div class="title">Óscar Santiago Pinilla</div>
-                    <p>User interface designer and <br />front-end and back-end developer</p>
+                    <p>
+                      User interface designer and <br />front-end and back-end
+                      developer
+                    </p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -244,20 +261,26 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 d-flex align-items-stretch justify-content-center">
+            <div
+              class="
+                col-lg-12 col-md-12 col-sm-12
+                d-flex
+                align-items-stretch
+                justify-content-center
+              "
+            >
               <div class="wrapper" data-aos="fade-up" data-aos-delay="400">
                 <div class="card front-face">
-                  <img
-                    src="@/assets/img/team/KusKus.jpg"
-                  />
+                  <img src="@/assets/img/team/KusKus.jpg" />
                 </div>
                 <div class="card back-face">
-                  <img
-                    src="@/assets/img/team/KusKus.jpg"
-                  />
+                  <img src="@/assets/img/team/KusKus.jpg" />
                   <div class="info">
                     <div class="title">Juan Pablo Aguirre</div>
-                    <p>User interface designer and <br />front-end and back-end developer</p>
+                    <p>
+                      User interface designer and <br />front-end and back-end
+                      developer
+                    </p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -275,9 +298,36 @@
     </main>
     <!-- End #main -->
     <!-- ======= Footer ======= -->
-    <Footer/>
+    <Footer />
     <!-- End Footer -->
-   <Preloader/>
-    <Backtop/>
+    <Preloader />
+    <Backtop />
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      vacancies: [],
+    }
+  },
+  mounted() {
+    this.getVacancy()
+  },
+  methods: {
+    async getVacancy() {
+      try {
+        await this.$axios.get('api/vancancy').then((response) => {
+          this.vacancies = response.data
+          console.log(this.vacancies)
+        })
+      } catch (error) {
+        this.$swal({
+          icon: 'error',
+          title: error,
+        })
+      }
+    },
+  },
+}
+</script>
