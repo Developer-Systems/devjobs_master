@@ -37,7 +37,7 @@
   <!-- End Header -->
 </template>
 <script></script>
-<style>
+<style scoped>
 .ap-1 {
   padding: 10px !important;
 }

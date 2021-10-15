@@ -41,13 +41,11 @@
 </template>
 
 <script>
-export default {}
+
 </script>
-<style>
+<style scoped>
 .ap-1 {
   padding: 10px !important;
 }
-.navbar {
-  background-color: #100e17;
-}
+
 </style>

@@ -14,10 +14,10 @@
                   /></a>
                 </h1>
                 <p>
-                  A108 Adam Street <br />
-                  NY 535022, USA<br /><br />
-                  <strong>Phone:</strong> +1 5589 55488 55<br />
-                  <strong>Email:</strong> info@example.com<br />
+                  Laureles 050032, Medellín <br />
+                  Antioquia, Colombia<br /><br />
+                  <strong>Phone:</strong> +57 604 1234567<br />
+                  <strong>Email:</strong> devjobs.ceo@devjobs.com.co<br />
                 </p>
                 <div class="social-links mt-3">
                   <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -60,12 +60,7 @@
             </div>
             <div class="col-lg-4 col-md-12 footer-newsletter">
               <h4>Location</h4>
-               <iframe
-              style="border: 0; width: 100%; height: 250px"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.277154883646!2d-75.60469690539381!3d6.254602057572375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290e99a6e195%3A0x9ec0a1f4596fadd4!2sLaureles%20-%20Estadio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1634264503625!5m2!1ses-419!2sco" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
         </div>

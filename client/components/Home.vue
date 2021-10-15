@@ -10,7 +10,7 @@
         >
           <div class="col-xl-6 col-lg-8">
             <h1>DevJobs<span>.</span></h1>
-            <h2>We are team of talented digital marketers</h2>
+            <h2>We are team of talented digital geeks</h2>
           </div>
         </div>
         <div
@@ -21,7 +21,7 @@
           <div class="col-xl-2 col-md-4">
             <div class="icon-box">
               <i class="ri-store-line"></i>
-              <h3><a href="#">Crear Vacante</a></h3>
+              <h3><a href="/signin">Create Vacancy</a></h3>
             </div>
           </div>
         </div>
@@ -127,91 +127,13 @@
           </div>
           <div class="row">
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch"
+              class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href="">Lorem Ipsum</a></h4>
-                <p>
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi
-                </p>
-                <div>
-                  <button>Postularse</button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="">Sed ut perspiciatis</a></h4>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4><a href="">Magni Dolores</a></h4>
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-world"></i></div>
-                <h4><a href="">Nemo Enim</a></h4>
-                <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-slideshow"></i></div>
-                <h4><a href="">Dele cardo</a></h4>
-                <p>
-                  Quis consequatur saepe eligendi voluptatem consequatur dolor
-                  consequuntur
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-arch"></i></div>
-                <h4><a href="">Divera don</a></h4>
-                <p>
-                  Modi nostrum vel laborum. Porro fugit error sit minus sapiente
-                  sit aspernatur
-                </p>
+                <h4><a href="/signin">Jobs List</a></h4>
               </div>
             </div>
           </div>
@@ -227,19 +149,43 @@
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
-              <div class="wrapper" data-aos="fade-up" data-aos-delay="100">
+              <div class="wrapper" data-aos="fade-up" data-aos-delay="400">
                 <div class="card front-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/team-2.jpg"
                   />
                 </div>
                 <div class="card back-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/team-2.jpg"
+                  />
+                  <div class="info">
+                    <div class="title">Viviana Castelblanco</div>
+                    <p>User interface designer and <br />front-end and back-end developer</p>
+                  </div>
+                  <ul class="social_lu">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+              <div class="wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="card front-face">
+                  <img
+                    src="@/assets/img/team/team-1.jpg"
+                  />
+                </div>
+                <div class="card back-face">
+                  <img
+                    src="@/assets/img/team/team-1.jpg"
                   />
                   <div class="info">
                     <div class="title">John Andrade</div>
-                    <p>User interface designer and <br />front-end developer</p>
+                    <p>User interface designer and <br />front-end and back-end developer</p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -254,16 +200,16 @@
                <div class="wrapper" data-aos="fade-up" data-aos-delay="200">
                 <div class="card front-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/team-3.jpg"
                   />
                 </div>
                 <div class="card back-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/team-3.jpg"
                   />
                   <div class="info">
-                    <div class="title">John Andrade</div>
-                    <p>User interface designer and <br />front-end developer</p>
+                    <div class="title">Juan Felipe Tamayo</div>
+                    <p>User interface designer and <br />front-end and back-end developer</p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -278,16 +224,16 @@
               <div class="wrapper" data-aos="fade-up" data-aos-delay="300">
                 <div class="card front-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/team-4.jpg"
                   />
                 </div>
                 <div class="card back-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/team-4.jpg"
                   />
                   <div class="info">
-                    <div class="title">John Andrade</div>
-                    <p>User interface designer and <br />front-end developer</p>
+                    <div class="title">Óscar Santiago Pinilla</div>
+                    <p>User interface designer and <br />front-end and back-end developer</p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -298,20 +244,20 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="col-lg-12 col-md-12 col-sm-12 d-flex align-items-stretch justify-content-center">
               <div class="wrapper" data-aos="fade-up" data-aos-delay="400">
                 <div class="card front-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/KusKus.jpg"
                   />
                 </div>
                 <div class="card back-face">
                   <img
-                    src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    src="@/assets/img/team/KusKus.jpg"
                   />
                   <div class="info">
-                    <div class="title">John Andrade</div>
-                    <p>User interface designer and <br />front-end developer</p>
+                    <div class="title">Juan Pablo Aguirre</div>
+                    <p>User interface designer and <br />front-end and back-end developer</p>
                   </div>
                   <ul class="social_lu">
                     <a href=""><i class="bi bi-twitter"></i></a>

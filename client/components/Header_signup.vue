@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="fixed-top bg-dark">
+  <header id="header" class="fixed-top bg">
     <div class="container d-flex align-items-center justify-content-lg-between">
       <h1 class="logo me-auto me-lg-5">
         <a href="/"
@@ -23,7 +23,7 @@ export default {}
 </script>
 
 <style scoped>
-.bg-dark {
-  background-color: #100e17 !important;
+.bg{
+  background-color: #100e17 ;
 }
 </style>
