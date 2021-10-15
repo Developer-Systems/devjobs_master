@@ -4,108 +4,71 @@
       <br />
       <h1 class="text-light text-center"><strong>Jobs Offers</strong></h1>
       <br />
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">
-            Junior Software Engineer - Location Flexible
-          </h5>
-          <p class="card-text">
-            Join us as we pursue our disruptive new vision to make machine data
-            accessible, usable and valuable to everyone. We are a company filled
-            with people who are passionate about our product and seek to deliver
-            the best experience for our customers. At Splunk, we’re committed to
-            our work, customers, having fun and most importantly to each other’s
-            success. Learn more about Splunk careers and how you can become a
-            part of our journey!
-          </p>
-          <a href="#" class="btn btn-dark">Apply</a>
+      <div v-for="vacancy in vacancies" :key="vacancy._id">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>{{vacancy.titulo}}</strong>
+            </h5>
+            <p class="card-text">
+              {{vacancy.descripcion}}
+            </p>
+            <p class="card-text">
+              <strong>Company</strong>: {{vacancy.empresa}}
+            </p>
+            <p class="card-text">
+              <strong>Location</strong>: {{vacancy.ubicacion}}
+            </p>
+            <p class="card-text">
+              <strong>Salary</strong>: {{vacancy.salario}}
+            </p>
+            <p class="card-text">
+              <strong>Contract</strong>: {{vacancy.contrato}}
+            </p>
+            <a href="#" class="btn btn-dark">Apply</a>
+          </div>
         </div>
-      </div>
-      <br />
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">
-            Junior Software Engineer - Location Flexible
-          </h5>
-          <p class="card-text">
-            Join us as we pursue our disruptive new vision to make machine data
-            accessible, usable and valuable to everyone. We are a company filled
-            with people who are passionate about our product and seek to deliver
-            the best experience for our customers. At Splunk, we’re committed to
-            our work, customers, having fun and most importantly to each other’s
-            success. Learn more about Splunk careers and how you can become a
-            part of our journey!
-          </p>
-          <a href="#" class="btn btn-dark">Apply</a>
-        </div>
-      </div>
-      <br />
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">
-            Junior Software Engineer - Location Flexible
-          </h5>
-          <p class="card-text">
-            Join us as we pursue our disruptive new vision to make machine data
-            accessible, usable and valuable to everyone. We are a company filled
-            with people who are passionate about our product and seek to deliver
-            the best experience for our customers. At Splunk, we’re committed to
-            our work, customers, having fun and most importantly to each other’s
-            success. Learn more about Splunk careers and how you can become a
-            part of our journey!
-          </p>
-          <a href="#" class="btn btn-dark">Apply</a>
-        </div>
-      </div>
-      <br />
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">
-            Junior Software Engineer - Location Flexible
-          </h5>
-          <p class="card-text">
-            Join us as we pursue our disruptive new vision to make machine data
-            accessible, usable and valuable to everyone. We are a company filled
-            with people who are passionate about our product and seek to deliver
-            the best experience for our customers. At Splunk, we’re committed to
-            our work, customers, having fun and most importantly to each other’s
-            success. Learn more about Splunk careers and how you can become a
-            part of our journey!
-          </p>
-          <a href="#" class="btn btn-dark">Apply</a>
-        </div>
-      </div>
-      <br />
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">
-            Junior Software Engineer - Location Flexible
-          </h5>
-          <p class="card-text">
-            Join us as we pursue our disruptive new vision to make machine data
-            accessible, usable and valuable to everyone. We are a company filled
-            with people who are passionate about our product and seek to deliver
-            the best experience for our customers. At Splunk, we’re committed to
-            our work, customers, having fun and most importantly to each other’s
-            success. Learn more about Splunk careers and how you can become a
-            part of our journey!
-          </p>
-          <a href="#" class="btn btn-dark">Apply</a>
-        </div>
+        <br />
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      vacancies: [],
+    }
+  },
+  mounted() {
+    this.getVacancy()
+  },
+  methods: {
+    async getVacancy() {
+      try {
+        await this.$axios.get('api/vancancy').then((response) => {
+          this.vacancies = response.data
+          console.log(this.vacancies)
+        })
+      } catch (error) {
+        this.$swal({
+          icon: 'error',
+          title: error,
+        })
+      }
+    },
+  },
+}
+</script>
 
 <style scoped>
 .mt-6 {
-  position: relative ;
+  position: relative;
   top: 5% !important;
 }
 .body {
-  font-family: "Mukta", sans-serif;
+  font-family: 'Mukta', sans-serif;
   width: 100vw;
   height: 100vh;
   background-color: #100e17;
