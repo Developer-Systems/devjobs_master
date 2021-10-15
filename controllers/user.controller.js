@@ -1,25 +1,52 @@
 const User = require("../models/Usuarios");
 
-module.exports = class UserController{
-  static async createUser (request, response) {
+module.exports = class UserController {
+  static async createUser(request, response) {
     try {
-      const {username,email,password,rol}= request.body;
-      const newUser = new User (
-        {
-          username,
-          email,
-          password : await User.encryptPassword(password),
-          rol
-        }
-      )
+      const { username, email, password, rol } = request.body;
+      const newUser = new User({
+        username,
+        email,
+        password: await User.encryptPassword(password),
+        rol,
+      });
       const user = await User.create(newUser);
 
       response.status(200).json(user);
     } catch (error) {
-      response.status(400).json({message: error.message});
+      response.status(400).json({ message: error.message });
     }
-  };
-}
+  }
+  static async updateUser(request, response) {
+    try {
+      const username = request.body.username;
+      const email = request.body.email;
+      const country = request.body.country;
+      const city = request.body.city;
+      const address = request.body.address;
+      const pnumber = request.body.pnumber;
+      const interests = request.body.interests;
+      const user = await User.updateOne(
+        { username: username },
+        {
+          $set: {
+            email: email,
+            country: country,
+            city: city,
+            address: address,
+            pnumber: pnumber,
+            interests: interests,
+          },
+        },
+        { upsert: true }
+      );
+
+      response.status(200).json(user);
+    } catch (error) {
+      response.status(400).json({ message: error.message });
+    }
+  }
+};
 
 // export const createUser = async (req, res) => {
 //   try {
