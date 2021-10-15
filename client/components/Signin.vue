@@ -37,7 +37,7 @@
 </template>
 <script>
 export default {
-  name: "signin",
+  name: 'signin',
   data() {
     return {
       email: '',
@@ -55,6 +55,7 @@ export default {
         if (response.status == 200 && response.data.code == 100) {
           localStorage.token = response.data.token
           localStorage.rol = response.data.rol
+          localStorage.username = response.data.username
           console.log(response.data.rol)
           this.$router.push('jobslist')
         }

@@ -21,9 +21,10 @@ module.exports = class AuthController{
       let res = {
         token: token,
         rol: userFound.rol,
+        username: userFound.username,
         code: 100,
-        msg: 'inicio de sesión con exito'
-      }
+        msg: "inicio de sesión con exito",
+      };
       response.status(200).json(res);
     } catch (error) {
       response.status(400).json({message: error.message});

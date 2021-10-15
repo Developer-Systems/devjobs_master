@@ -10,6 +10,7 @@ router.get('/vancancy', VacancyController.getVacancy);
 router.post('/auth/signup', UserController.createUser);
 router.post("/auth/signin", AuthController.signIn);
 router.post("/vancancy/create", VacancyController.createVacancy);
+router.put("/user/update",UserController.updateUser);
 
 // router.post(
 //       "/auth/signup", () =>{

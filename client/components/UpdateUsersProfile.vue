@@ -14,86 +14,138 @@
         <div class="d-flex justify-content-center">
           <h4 class="text-center"><strong>Edit Profile</strong></h4>
         </div>
-        <div class="row mt-2">
-          <div class="col-md-12">
-            <label class="labels">Name</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="Full Name"
-              value=""
-            />
-          </div>
-          <div class="col-md-12">
-            <label class="labels">Adress </label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="Full Adress"
-              value=""
-            />
-          </div>
+        <form class="form" v-on:submit.prevent="update">
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <label class="labels">Name</label
+              ><input
+                disabled
+                type="text"
+                class="form-control"
+                v-model="username"
+              />
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Address</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Full Address"
+                value=""
+                v-model="address"
+              />
+            </div>
 
-          <div class="col-md-12">
-            <label class="labels">Telephone</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="Telephone"
-              value=""
-            />
-          </div>
+            <div class="col-md-12">
+              <label class="labels">Telephone</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Telephone"
+                value=""
+                v-model="pnumber"
+              />
+            </div>
 
-          <div class="col-md-12">
-            <label class="labels">Email</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder=" Email"
-              value=""
-            />
+            <div class="col-md-12">
+              <label class="labels">Email</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder=" Email"
+                value=""
+                v-model="email"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="labels">Country</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Country"
+                value=""
+                v-model="country"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="labels"> City</label
+              ><input
+                type="text"
+                class="form-control"
+                value=""
+                placeholder="City"
+                v-model="city"
+              />
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Interests</label>
+              <textarea
+                type="text"
+                class="form-control"
+                id="interests"
+                rows="3"
+                placeholder="Tell us more"
+                value=""
+                v-model="interests"
+              ></textarea>
+            </div>
           </div>
-          <div class="col-md-6">
-            <label class="labels">Country</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="Country"
-              value=""
-            />
+          <div class="mt-5 text-center">
+            <button class="get-started-btn profile-button" type="submit">
+              Save
+            </button>
           </div>
-          <div class="col-md-6">
-            <label class="labels"> City </label
-            ><input
-              type="text"
-              class="form-control"
-              value=""
-              placeholder="City"
-            />
-          </div>
-          <div class="col-md-12 ">
-            <label class="labels">Interests</label>
-            <textarea
-            type="text"
-              class="form-control"
-              id="interests"
-              rows="3"
-              placeholder="Tell us more"
-              value=""
-            ></textarea>
-          </div>
-        </div>
-        <div class="mt-5 text-center">
-          <button class="get-started-btn profile-button" type="button">
-            Save
-          </button>
-        </div>
+        </form>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      username: '',
+      email: '',
+      country: '',
+      city: '',
+      address: '',
+      pnumber: '',
+      interests: '',
+    }
+  },
+  methods: {
+    async update() {
+      let data = {
+        username: this.username,
+        email: this.email,
+        country: this.country,
+        city: this.city,
+        address: this.address,
+        pnumber: this.pnumber,
+        interests: this.interests,
+      }
+      console.log(data)
+      try {
+        await this.$axios.put('api/user/update', data).then((response) => {
+          this.$swal({
+            icon: 'success',
+            title: 'Usuario Actualizado',
+          })
+        })
+      } catch (error) {
+        this.$swal({
+          icon: 'error',
+          title: error,
+        })
+      }
+    },
+  },
+  mounted() {
+    this.username = localStorage.username
+    console.log(localStorage.username)
+  },
+}
 </script>
 
 <style>
