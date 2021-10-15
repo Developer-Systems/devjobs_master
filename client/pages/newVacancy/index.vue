@@ -1,10 +1,11 @@
 <template>
   <div>
-    <JobsList/>
+    <NewVacancy/>
   </div>
 </template>
 
 <script>
+
 export default {
   middleware: "isAuthenticated",
   layout: 'AuthReady',

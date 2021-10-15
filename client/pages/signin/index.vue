@@ -6,6 +6,7 @@
 
 <script>
 export default {
-    layout: 'LayoutSignin'
+  middleware: 'isRedirect',
+  layout: 'LayoutSignin',
 }
 </script>

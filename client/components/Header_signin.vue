@@ -21,3 +21,9 @@
 <script>
 export default {}
 </script>
+
+<style scoped>
+  .bg-dark {
+    background-color: #100e17 !important;
+  }
+</style>

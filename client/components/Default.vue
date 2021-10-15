@@ -1,11 +1,17 @@
 <template>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  ">
+  <header id="header" class="fixed-top">
     <nav
-      class="d-flex justify-content-between navbar navbar-expand-lg navbar order-last order-lg-0"
+      class="
+        d-flex
+        justify-content-between
+        navbar navbar-expand-lg navbar
+        order-last order-lg-0
+      "
     >
-      <h1 class="logo me-lg-0 ">
-        <router-link to="/jobs-list" exact-path class="nav-link scrollto"><img
+      <h1 class="logo me-lg-0">
+        <router-link to="/jobs-list" exact-path class="nav-link scrollto"
+          ><img
             src="@/assets/img/logo_header_blanco.png"
             alt=""
             class="img-fluid"
@@ -13,16 +19,14 @@
       </h1>
 
       <ul>
-        <li><router-link to="/jobs-list" exact-path class="nav-link scrollto router-link-exact-path-active">Inicio DevJobs</router-link></li>
-        <li><router-link to="/vacancy" exact-path class="nav-link scrollto">Creación de vacantes</router-link></li>
-        <li><router-link to="/alert" exact-path class="nav-link scrollto">Alertas</router-link></li>
         <li>
-          <router-link to="/jobs-list" exact-path class="nav-link scrollto router-link-exact-path-active">Lista de trabajos</router-link>
+          <a class="nav-link scrollto active" href="/jobsList">Jobs List</a>
         </li>
-        <li><router-link to="/update-user" exact-path class="nav-link scrollto router-link-exact-path-active">Cuenta</router-link></li>
+        <li><a class="nav-link scrollto" href="/newVacancy">Create Vacancy</a></li>
+        <li><a class="nav-link scrollto" href="/updUserProfile">Account</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-      <form class="col-6 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto ">
+      <form class="col-6 col-lg-auto mb-2 mb-lg-0 me-lg-5 ms-auto">
         <input
           type="search"
           class="form-control form-control-dark"
@@ -30,7 +34,7 @@
           aria-label="Search"
         />
       </form>
-      <div class="icon  " id="bell">
+      <div class="icon" id="bell">
         <img src="https://i.imgur.com/AC7dgLA.png" alt="" />
       </div>
       <div class="notifications" id="box">
@@ -42,34 +46,45 @@
           </div>
         </div>
       </div>
+      <div class="d-flex">
+        <button
+          type="submit"
+          class="button get-started-btn p-1"
+          @click="logout"
+          id="log_out"
+        >
+          Logout
+        </button>
+      </div>
     </nav>
   </header>
   <!-- End Header -->
 </template>
 <script>
-import $ from "jquery";
+import $ from 'jquery'
 export default {
   mounted() {
-    this.notificaciones();
+    this.notificaciones()
   },
   methods: {
     notificaciones() {
-      $(document).ready(function() {
-        var down = false;
+      $(document).ready(function () {
+        var down = false
 
-        $("#bell").click(function(e) {
-          var color = $(this).text();
+        $('#bell').click(function (e) {
+          var color = $(this).text()
           if (down) {
-            $("#box").css("height", "0px");
-            $("#box").css("opacity", "0");
-            down = false;
+            $('#box').css('height', '0px')
+            $('#box').css('opacity', '0')
+            down = false
           } else {
-            $("#box").css("height", "auto");
-            $("#box").css("opacity", "1");
-            down = true;
+            $('#box').css('height', 'auto')
+            $('#box').css('opacity', '1')
+            down = true
           }
-        });
-      });
+        })
+      })
+
       // const bell = document.getElementById("bell");
       // const box = document.getElementById("box");
       // let down = false;
@@ -84,12 +99,17 @@ export default {
       //   }
       // });
     },
+    async logout() {
+      await this.$auth.logout('')
+      this.$router.push('/signin')
+    },
   },
-};
+}
 </script>
 <style scoped>
 .navbar {
   color: black;
+  background-color: black;
 }
 /* Notifications Form */
 .notifications {
@@ -170,4 +190,13 @@ export default {
   font-size: 12px;
 }
 /* End Notification Form */
+
+.button {
+  background-color: transparent;
+  margin-right: 2rem;
+}
+
+#header {
+  padding: 0;
+}
 </style>

@@ -1,13 +1,8 @@
 <template>
   <div class="body">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <div class="container mt-6">
       <br />
-      <h1 class="text-light"><strong>Jobs Offers</strong></h1>
+      <h1 class="text-light text-center"><strong>Jobs Offers</strong></h1>
       <br />
       <div class="card">
         <div class="card-body">
@@ -104,14 +99,13 @@
 
 <script></script>
 
-<style>
+<style scoped>
 .mt-6 {
-  margin-top: 5 rem;
+  position: relative ;
+  top: 5% !important;
 }
 .body {
   font-family: "Mukta", sans-serif;
-  -ms-overflow-style: hidden !important;
-  overflow-y: hidden !important;
   width: 100vw;
   height: 100vh;
   background-color: #100e17;

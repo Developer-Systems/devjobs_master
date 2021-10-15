@@ -2,41 +2,41 @@
   <div class="information_content">
     <section class="content">
       <h1 class="companyName text-dark">DevJobs</h1>
-      <h1 class="slogan text-dark">Conectando talentos y oportunidades</h1>
+      <h1 class="slogan text-dark">Connecting talents and opportunities</h1>
     <br/>
       <div class="section text-dark">
         <article class="article">
-          DevJobs es una aplicación Web, que tiene como propósito ser el puente
-          entre los mejores desarrolladores y las oportunidades laborales más
-          interesantes. Queremos contribuir positivamente a la sociedad,
-          ayudando a los emprendedores que requieren el mejor talento para
-          adelantar sus proyectos y a los desarrolladores a conectarse con los
-          empleos más llamativos, nuestra visión poder conectar al mundo.
+          DevJobs is a Web application, whose purpose is to be the bridge
+          among the best developers and the most job opportunities
+          interesting We want to contribute positively to society,
+          helping entrepreneurs who require the best talent to
+          advance their projects and developers to connect with the
+          more attractive jobs, our vision to be able to connect the world.
         </article>
         <br />
         <article class="article">
-          Somos concientes de la existencia de diversas plataformas de empleo,
-          sin embargo nos destacamos porque somo una comunidad especializada en
-          el talento en desarrollo de software y estamos a la vanguardia de las
-          tendencias y de las tecnologías, ofreciendo la oportunidad a las
-          personas que han capaticado de ser visibles en el mercado laboral.
+          We are aware of the existence of various employment platforms,
+          however we stand out because we are a community specialized in
+          talent in software development and we are at the forefront of
+          trends and technologies, offering the opportunity to
+          people who have trained to be visible in the job market.
         </article>
         <br />
         <article class="article">
-          En DevJobs hemos entendido que el papel de los desarrolladores en la
-          sociedad es muy importante, en este mundo globalizado, tenemos la
-          responsabilidad de atender a las crecientes necesidades de expasión de
-          todos los sectores: la economía, la educación, la salud, la cultura,
-          el deporte, la agricultura no existe un campo en donde no se involucre
-          la tecnología, y por eso queremos ser el canal que facilite este
-          proceso.
+          At DevJobs we have understood that the role of developers in
+          society is very important, in this globalized world, we have the
+          responsibility to meet the growing needs for expansion of
+          all sectors: economy, education, health, culture,
+          sports, agriculture there is no field where they do not get involved
+          technology, and that is why we want to be the channel that facilitates this
+          process.
         </article>
         <br />
         <article class="article">
-          DevJobs es un sitio web para emprendedores hecho por emprendedores,
-          los integrantes de este equipo nos desenvolvemos en diferentes
-          disciplinas y aportamos nuestros conocimientos a la comunidad para
-          generar un espacio intuitivo y dinámico. Hacemos parte de la
+          DevJobs is a website for entrepreneurs made by entrepreneurs,
+          the members of this team work in different
+          disciplines and we bring our knowledge to the community to
+          generate an intuitive and dynamic space. We are part of
           <mark><b>MisiónTic UTP 2022</b></mark>
         </article>
       </div>

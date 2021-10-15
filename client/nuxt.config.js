@@ -122,14 +122,14 @@ export default {
     '@/assets/vendor/glightbox/css/glightbox.min.css',
     '@/assets/vendor/remixicon/remixicon.css',
     '@/assets/vendor/swiper/swiper-bundle.min.css',
-    '@/assets/css/style.css'
+    '@/assets/css/style.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/main.js', ssr: true },
-  { src: '@/plugins/swiper.js', ssr: true }
-],
+    { src: '@/plugins/swiper.js', ssr: true },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -145,48 +145,50 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+
     '@nuxtjs/auth-next',
-    'vue-sweetalert2/nuxt'
+
+    'vue-sweetalert2/nuxt',
   ],
 
   sweetalert: {
     confirmButtonColor: '#41b882',
-    cancelButtonColor: '#ff7674'
+    cancelButtonColor: '#ff7674',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL:'http://localhost:5000/'
+    baseURL: 'https://api-devjobs-web.herokuapp.com/',
   },
 
   auth: {
     strategies: {
       local: {
-        url: 'http://localhost:5000',
+        url: 'https://api-devjobs-web.herokuapp.com',
         token: {
           property: 'token',
           global: true,
           required: true,
           type: 'Bearer',
-          name: 'Authorization'
+          name: 'Authorization',
         },
         endpoints: {
           login: { url: '/api/auth/signin', method: 'post' },
           logout: false,
-          user: false
+          user: false,
         },
         redirect: {
           login: '/signin',
           logout: '/',
           callback: '/signin',
-          home: '/jobslist'
-        }
-      }
-    }
+          home: '/jobslist',
+        },
+      },
+    },
   },
-  proxy:{
+  proxy: {
     //  '/api/': 'http://localhost:5000/api/',
-   },
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

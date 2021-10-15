@@ -42,6 +42,6 @@
   padding: 10px !important;
 }
 .navbar {
-  color: black;
+  background-color: #100e17;
 }
 </style>
