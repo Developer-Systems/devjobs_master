@@ -132,7 +132,7 @@
                 v-for="vacancy in vacancies"
                 :key="vacancy._id"
               >
-                <div class="card w-">
+                <div class="card w-100 h-100">
                   <div class="card-body">
                     <h5 class="card-title">
                       <strong>{{ vacancy.titulo }}</strong>
@@ -152,7 +152,7 @@
                     <p class="card-text">
                       <strong>Contract</strong>: {{ vacancy.contrato }}
                     </p>
-                    <a href="/signin" class="btn btn-dark">Apply</a>
+                    <a href="/signin" class="btn btn-dark position-absolute bottom-0 start-50 translate-middle-x">Apply</a>
                   </div>
                 </div>
               </div>
