@@ -15,6 +15,7 @@ createRoles();
 createAdmin();
 
 app.use(cors());
+app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,9 +28,17 @@ app.use(cookieParser());
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-        mongoUrl: process.env.DATABASE || 'mongodb://localhost:27017/devjobs'
+        mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost:27017/devjobs'
     })
 }));
+
+app.get('/', (req,res) =>{
+  res.json({
+    status: 'ok',
+    Title: 'DevJobs',
+    Description: 'developer job portal ' 
+  })
+})
 
 app.use('/api', router)
 

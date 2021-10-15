@@ -158,13 +158,13 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:5000/',
+    baseURL: 'https://api-devjobs-web.herokuapp.com/',
   },
 
   auth: {
     strategies: {
       local: {
-        url: 'http://localhost:5000',
+        url: 'https://api-devjobs-web.herokuapp.com',
         token: {
           property: 'token',
           global: true,
